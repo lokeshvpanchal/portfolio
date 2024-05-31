@@ -1,17 +1,18 @@
 import "./Desktop.css";
 import "./global.css";
-
-const container = document.querySelector(".grid");
-
-window.addEventListener("mousemove", update);
+import React, { useEffect} from "react";
+import Loader from "./Loader";
+import Cup from "./Cup";
 
 function update(event){
+    const container = document.querySelector(".grid");
+
 	/* get the cursor position */
 	const { clientX, clientY } = event;
 	
 	/* find the center of the window */
-	const centerX = window.innerWidth / 2;
-	const centerY = window.innerHeight / 2;
+	const centerX = window.innerWidth *0.7;
+	const centerY = window.innerHeight *0.5;
 	
 	/* get the cursor distance from the center in px */
 	const offsetX = clientX - centerX;
@@ -27,15 +28,28 @@ function update(event){
 }// update
 
 const Desktop = ({ className = "" }) => {
+    useEffect(() => {
+        window.addEventListener("mousemove", update);
+
+        setTimeout(function(){
+          document.querySelector(".loader-page").style.display = 'none';
+      }, 500); 
+      
+    });
   return (
+    <div>
+    <div className="loader-page">
+        <Loader/>
+    </div>
     <div className={`desktop-1 ${className}`}>
+
       <div className="desktop-1-child" />
       <div className="menu">MENU</div>
-      <img className="vector-icon" alt="" src="/vector.svg" />
-      <img className="vector-icon1" alt="" src="/vector1.svg" />
-      <div className="hire-me">hire me!</div>
+      <button className="hire-me"> 
+        <img className="vector-icon" alt="" src="/vector.png" />hire me
+      </button>
       <img className="image-1-icon" alt="" src="/avatar-bg.png" />
-      <img className="avatars-default-1-1"  alt="" src="./avatar.png"/>
+      <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
       <div class="grid">
         <div class="pane"></div>
         <div class="pane"></div>
@@ -46,6 +60,8 @@ const Desktop = ({ className = "" }) => {
         <p className="name-is">name is</p>
       </div>
       <b className="lokesh">Lokesh.</b>
+      <Cup/>
+
       <div className="i-am-a-container">
         <p className="name-is">I am a computer science student at</p>
         <p className="name-is">
@@ -56,6 +72,7 @@ const Desktop = ({ className = "" }) => {
       <div className="scroll">scroll</div>
       <div className="desktop-1-inner" />
       <div className="ellipse-div" />
+    </div>
     </div>
   );
 };
