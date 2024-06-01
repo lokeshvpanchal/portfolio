@@ -4,7 +4,7 @@ import Desktop from './desktop';
 function App() {
   return (
     <main>
-      <Desktop/>
+         <Desktop/>
     </main>
   );
 }

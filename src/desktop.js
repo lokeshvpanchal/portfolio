@@ -1,8 +1,9 @@
 import "./Desktop.css";
 import "./global.css";
-import React, { useEffect} from "react";
+import React, {useEffect } from 'react';
 import Loader from "./Loader";
 import Cup from "./Cup";
+import { Parallax,ParallaxLayer } from '@react-spring/parallax';
 
 function update(event){
     const container = document.querySelector(".grid");
@@ -30,33 +31,31 @@ function update(event){
 const Desktop = ({ className = "" }) => {
     useEffect(() => {
         window.addEventListener("mousemove", update);
-
-        setTimeout(function(){
-          document.querySelector(".loader-page").style.display = 'none';
-      }, 500); 
-      
     });
   return (
-    <div>
+  <div>
     <div className="loader-page">
         <Loader/>
     </div>
     <div className={`desktop-1 ${className}`}>
-
+      {/* <Parallax> */}
       <div className="desktop-1-child" />
       <div className="menu">MENU</div>
       <button className="hire-me"> 
         <img className="vector-icon" alt="" src="/vector.png" />hire me
       </button>
       <img className="image-1-icon" alt="" src="/avatar-bg.png" />
-      <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
-      <div class="grid">
-        <div class="pane"></div>
-        <div class="pane"></div>
+      <div className="avatar">
+        <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
+        <div class="grid">
+          <div class="pane"></div>
+          <div class="pane"></div>
+        </div>
       </div>
       
+      
       <div className="hi-my-name-container">
-        <p className="hi-my">Hi, my</p>
+        <p className="hi-my">Hi, my </p>
         <p className="name-is">name is</p>
       </div>
       <b className="lokesh">Lokesh.</b>
@@ -70,8 +69,8 @@ const Desktop = ({ className = "" }) => {
       </div>
       <div className="desktop-1-item" />
       <div className="scroll">scroll</div>
-      <div className="desktop-1-inner" />
-      <div className="ellipse-div" />
+      {/* </Parallax> */}
+
     </div>
     </div>
   );

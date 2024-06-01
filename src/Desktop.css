@@ -11,12 +11,12 @@
   .loader-page{
     width: 98vw;
     height: 98vh;
-    position:absolute;
+    position:fixed;
     left: 1vw;
     top: 1vh;
     z-index: 600;
     background-color: #73c4ff;
-    /* animation: loader_out 2s 4s  1 linear; */
+    animation: loader_out 1s ease 4s  forwards;
 }
 
 @keyframes loader_out {
@@ -36,7 +36,6 @@
     100%{
         left:100vw;
         opacity: 0;
-        display: none;
     }
 }
 
@@ -131,8 +130,32 @@
     width: 786px;
     height: 341px;
     object-fit: cover;
+    opacity: 0%;
     mix-blend-mode: linear-burn;
+    animation: animate-avatar 0.5s ease 6.5s forwards;
   }
+
+  .avatar{
+    width: 1440px;
+    height: 1024px;
+    opacity: 0%;
+    animation: animate-avatar 1s ease-in 6.5s forwards;
+  }
+  @keyframes animate-avatar {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(-30px);
+      }
+      80% { transform: translateX(10px); }
+      100% { transform: translateX(0);
+        opacity: 1;
+    }
+    }
+
   .avatars-default-1-1 {
     position: absolute;
     top: 70px;
@@ -156,40 +179,69 @@
     font-family: var(--font-kaisei-harunoumi);
   }
   .hi-my-name-container {
-    top: 338px;
+    top: 307px;
     left: 100px;
     color: var(--color-midnightblue);
-    animation: text-animate 0.5s 2s linear 1;
+  }
+  .hi-my-name-container p{
+    opacity: 0%;
+    overflow: hidden;
+    line-height: 102px;
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: text-animate 0.5s ease 5.5s forwards; 
+   
   }
 
   @keyframes text-animate{
     0%{
         opacity: 0%;
-        left:150px;
-    }
-    50%{
-        opacity: 100%;
-        left:150px;
+        width: 0;
     }
     100%{
         opacity: 100%;
-        left:100px
+        width: 100%;
     }
+  
   }
   .lokesh {
     top: 419px;
     left: 415px;
     color: #73c4ff;
+    opacity: 0%;
+    animation: name-animate  0.25s ease-in 6.0s forwards; ;
 
   }
+  @keyframes name-animate{
+    0%{
+        opacity: 0%;
+        left:400px;
+    }
+    100%{
+        opacity: 100%;
+        left:415px
+    }
+  }
+  
   .i-am-a-container {
     position: absolute;
     top: 535px;
     left: 119px;
     font-family: var(--font-inter);
     color: var(--color-midnightblue);
-
+    opacity: 0%;
+    animation: animate-details 0.5s ease 6.5s forwards;
   }
+
+  @keyframes animate-details{
+    0%{
+        opacity: 0%;
+        height:0;
+    }
+    100%{
+        opacity: 100%;
+        height: 100%;
+    }
+  } 
   .desktop-1-item {
     position: absolute;
     top: 793.5px;
@@ -198,11 +250,12 @@
     box-sizing: border-box;
     width: 1px;
     height: 194px;
+
   }
   .desktop-1-inner,
   .scroll {
     position: absolute;
-    top: 719px;
+    top: 680px;
     left: 266px;
   }
   .desktop-1-inner {
@@ -233,6 +286,7 @@
     font-size: var(--font-size-11xl);
     color: var(--color-black);
     font-family: var(--font-italiana);
+
   }
   
 
