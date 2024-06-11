@@ -1,13 +1,12 @@
-.loader{
-}
+
 
 .cup-only{
   width: 190px;
   height: 50px;
   position: fixed;
-  left: 42rem;
-  top: 28rem;
-  z-index: 6000;
+  left: 39.7rem;
+  top: 21.4rem;
+  z-index: 10000;
   animation: change-position 5s forwards;
 }
 
@@ -26,8 +25,8 @@
   width: 300px;
   height: 280px;
   position: absolute;
-  top: calc(50% - 140px);
-  left: calc(50% - 130px);
+  top: calc(50% - 224px);
+  left: calc(50% - 135px);
 }
 
 .coffee-header {
@@ -74,8 +73,8 @@
   top: calc(50% - 25px);
   left: calc(50% - 25px);
   border-radius: 50%;
-  background-color: #9acfc5;
-  border: 5px solid #43beae;
+  background-color: #ab8d59;
+  border: 5px solid #9e5437;
   box-sizing: border-box;
 }
 
@@ -303,7 +302,7 @@
   position: absolute;
   bottom: 25px;
   left: calc(50% - 47.5%);
-  background-color: #41bdad;
+  background-color: #9e5437;
   border-radius: 10px;
 }
 
