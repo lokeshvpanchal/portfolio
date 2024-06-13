@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    margin: 10px;
     transition: 0.1s;
   }
   .button svg {
@@ -21,20 +21,17 @@
   }
   
   .button:nth-child(3) {
-    background: linear-gradient(120deg, #a9c9ff, #219af7);
+    background: linear-gradient(120deg, #b0d1ff, #0063af);
   }
   
   .button:nth-child(2) {
-    background: linear-gradient(120deg, #0077b5, #73bee7);
+    background: linear-gradient(120deg, #0077b5, #005c8e);
   }
   
-  .button:nth-child(1) {
-    background:linear-gradient(120deg, #02ff2c, #008a12);
 
-  }
   
   .button:nth-child(4) {
-    background: linear-gradient(120deg, #333,  #4b4b4b);
+    background: linear-gradient(120deg, #000000,  #bdbdbd);
   }
   
   .button:active {
@@ -46,7 +43,7 @@
     position: absolute;
     width: 55px;
     height: 55px;
-    background-color: #212121;
+    background-color: midnightblue;
     border-radius: 50px;
     z-index: -1;
     border: 0px solid rgba(255, 255, 255, 0.411);

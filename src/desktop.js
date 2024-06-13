@@ -47,16 +47,16 @@ const Desktop = ({ className = "" }) => {
       <Contacts/>
     </div>
     
-    <Parallax pages={5.05} style={{height:"750px"}}>
+    <Parallax pages={6.05} style={{height:"750px"}}>
 
       <ParallaxLayer sticky={{start:0,end:4}}>
-      <div className="menu">MENU</div>
-      <button className="hire-me"> 
-        <img className="vector-icon" alt="" src="/vector.png" />hire me
-      </button>
+      <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" style={{textDecoration:"none",color:"black"}}>
+  hire me!
+</a>
+
       </ParallaxLayer>
-      <ParallaxLayer sticky={{start:0 , end:1}}>
-      <img className="image-1-icon" alt="" src="/avatar-bg.png" />
+      <ParallaxLayer className ="avatar-comp" sticky={{start:0 , end:1}}>
+      <img className="image-1-icon" src="/avatar-bg.png" />
       <div className="avatar">
         <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
         <div class="grid">
@@ -99,7 +99,7 @@ const Desktop = ({ className = "" }) => {
       <div className="about" >
       I am your friendly neighborhood Computer Science enthusiast
       and I'm on a quest to master the art of full-stack web development,
-      <span style={{color:"#3ed9ff"}}>one line of code at a time. </span>
+      <span style={{color:"#3ed9ff"}}> one line of code at a time. </span>
        Recently, I've also started diving into the fascinating world of machine learning,
       expanding my skill set and exploring new horizons in technology.
 
@@ -107,7 +107,7 @@ const Desktop = ({ className = "" }) => {
     </ParallaxLayer>
     <ParallaxLayer offset={1} speed={0.7} >
       <div className="work-together-heading">
-        Let's work together <span style={{color:"#3ea7f1"}}>.</span>
+        Let's work together<span style={{color:"#3ea7f1"}}>.</span>
         <hr/>
       </div>
       </ParallaxLayer>
@@ -122,7 +122,7 @@ const Desktop = ({ className = "" }) => {
     <ParallaxLayer offset={2}>
       <Project/>
     </ParallaxLayer>
-    <ParallaxLayer offset={4} speed={1.5}>
+    <ParallaxLayer offset={5} speed={2}>
       <div className="skills-heading">Skills <hr/></div>
       
       <img className="skill-img" src="/images/skills.jpeg"></img>

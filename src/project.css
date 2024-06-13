@@ -1,6 +1,10 @@
+.projects-section{
+    font-size: 20px;
+}
+
 .projects-heading{
     position: relative;
-    left: 105px;
+    left: 95px;
     top: 100px;
     font-size: 50px;
     font-family: var(--font-kaisei-harunoumi);
@@ -8,7 +12,7 @@
 
   .projects{
     position: relative;
-    left: 105px;
+    left: 95px;
     top: 200px;
     display: flex;
     width: 100vw;
@@ -23,15 +27,17 @@
 
   .project-img{
     position: relative;
-    height: 20rem;
-    width: 35rem;
+    height: 25rem;
+    width: 43.8rem;
     border-radius:1rem;
 
 
   }
 
   .project-details{
-    width: 40rem;
+    width: 35rem;
+    text-align: justify;
+
   }
 
 .projects-section hr{
@@ -39,7 +45,7 @@
 }
 
 .project-card{
-    margin:0 0 10rem 2rem  ;
+    margin:0 1rem 15rem 1rem ;
 
 }
 
@@ -54,10 +60,10 @@
 }
 
 .sliding-img{
-    height: 20rem;
-    width: 35rem;
-    max-height: 20rem;
-    max-width: 35rem;
+    height: 25rem;
+    width: 43.8rem;
+    max-height: 25rem;
+    max-width: 43.8rem;
     overflow: hidden;
     display: flex;
     border-radius: 1rem;
@@ -66,40 +72,148 @@
 .img-slider{
     display: flex;
     position: relative;
-    animation: slider 15s ease-in-out 0s infinite;
+    animation: slider-7pic 20s ease-in-out 0s infinite;
 }
 
-@keyframes slider {
-    0%{
-        left:0rem;
+.cantstop-slider{
+    animation: slider-reverse 20s ease-in-out 0s infinite;
+}
+
+.zombie-slider{
+    animation: slider-4pic 20s ease-in-out 0s infinite;
+
+}
+
+@keyframes slider-7pic {
+    0% {
+        left: 0rem;
     }   
-    23%{
+    12.5% {
         left: 0rem;
     }
-    25%{
-        left: -35rem;
+    14.29% {
+        left: -43.8rem;
     }
-    48%{
-        left: -35rem;
+    26.79% {
+        left: -43.8rem;
     }
-    50%{
-        left:-70rem;
+    28.57% {
+        left: -87.6rem;
     }
-    73%{
-        left:-70rem;
+    41.07% {
+        left: -87.6rem;
     }
-    75%{
-        left:-105rem;
+    42.86% {
+        left: -131.4rem;
     }
-    98%{
-        left: -105rem;
+    55.36% {
+        left: -131.4rem;
     }
-    100%{
+    57.14% {
+        left: -175.2rem;
+    }
+    69.64% {
+        left: -175.2rem;
+    }
+    71.43% {
+        left: -219rem;
+    }
+    83.93% {
+        left: -219rem;
+    }
+    85.71% {
+        left: -262.8rem;
+    }
+    98.21% {
+        left: -262.8rem;
+    }
+    100% {
         left: 0rem;
     }
 }
+
+
+@keyframes slider-reverse {
+    0% {
+        left: calc(-1 * 43.8rem * 6); /* Start at the leftmost position */
+    }
+    12.5% {
+        left: calc(-1 * 43.8rem * 6);
+    }
+    14.29% {
+        left: calc(-1 * 43.8rem * 5);
+    }
+    26.79% {
+        left: calc(-1 * 43.8rem * 5);
+    }
+    28.57% {
+        left: calc(-1 * 43.8rem * 4);
+    }
+    41.07% {
+        left: calc(-1 * 43.8rem * 4);
+    }
+    42.86% {
+        left: calc(-1 * 43.8rem * 3);
+    }
+    55.36% {
+        left: calc(-1 * 43.8rem * 3);
+    }
+    57.14% {
+        left: calc(-1 * 43.8rem * 2);
+    }
+    69.64% {
+        left: calc(-1 * 43.8rem * 2);
+    }
+    71.43% {
+        left: calc(-1 * 43.8rem * 1);
+    }
+    83.93% {
+        left: calc(-1 * 43.8rem * 1);
+    }
+    85.71% {
+        left: 0rem;
+    }
+    98.21% {
+        left: 0rem;
+    }
+    100% {
+        left: calc(-1 * 43.8rem * 6); /* Return to the leftmost position */
+    }
+}
+
+
+@keyframes slider-4pic {
+    0% {
+        left: 0rem;
+    }   
+    23% {
+        left: 0rem;
+    }
+    25% {
+        left: -43.8rem;
+    }
+    48% {
+        left: -43.8rem;
+    }
+    50% {
+        left: -87.6rem;
+    }
+    73% {
+        left: -87.6rem;
+    }
+    75% {
+        left: -131.4rem;
+    }
+    98% {
+        left: -131.4rem;
+    }
+    100% {
+        left: 0rem;
+    }
+}
+
 
 .sliding-img img{
-    height: 20rem;
-    width: 35rem;
+    height: 25rem;
+    width: 43.8rem;
 }

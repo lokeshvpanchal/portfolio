@@ -4,11 +4,16 @@
     top: 1rem;
     left: 1rem;
     background-color: rgba(220, 236, 244, 0.535);
+    text-shadow: 1px 1px 20px rgb(174, 219, 242);
     width: 98vw;
     height: 98vh;
-    z-index: -1;
     overflow: scroll;
   }
+
+.contact{
+  position: fixed;
+  z-index: 10000000;
+}
 
 .loader-page{
     width: 98vw;
@@ -22,8 +27,8 @@
 }
 .loader-page .cup-only{
     position: fixed;
-    left: 40.9rem;
-    top: 22.7rem;
+    left: 40.7rem;
+    top: 22.5rem;
 
 }
 
@@ -53,7 +58,6 @@
     left: 58.5rem;
     top: 21rem;
 	display: grid;
-    z-index: 300;
 	height: 50%;
 	aspect-ratio: 1.8/4;
 	grid-template-rows: repeat(2, 1fr);
@@ -123,16 +127,21 @@
   .image-1-icon {
     position: absolute;
     top: 57px;
-    left: 1261px;
+    left: 1291px;
     display: flex;
     align-items: center;
     background-color: transparent;
     border: none;
     font-size: 20px;
     font-family: var(--font-italiana);
+    text-decoration: none;
+  }
 
+  .avatar-comp{
+    z-index: -1;
   }
   .image-1-icon {
+    position: absolute;
     top: 357px;
     left: 566px;
     width: 786px;
@@ -181,10 +190,10 @@
   }
   .hi-my-name-container,
   .lokesh {
+    z-index: 500;
     position: absolute;
     font-size: var(--font-size-61xl);
     line-height: 80px;
-    font-family: var(--font-kaisei-harunoumi);
   }
   .hi-my-name-container {
     top: 307px;
@@ -212,9 +221,10 @@
   
   }
   .lokesh {
+    text-shadow: #73c4ff;
     top: 421px;
     left: 415px;
-    color: #3ea7f1;
+    color: #3ea6f1;
     opacity: 0%;
     animation: name-animate  0.25s ease-in 6.0s forwards; ;
 
@@ -234,7 +244,6 @@
     position: absolute;
     top: 535px;
     left: 105px;
-    font-family: var(--font-inter);
     color: var(--color-midnightblue);
     opacity: 0%;
     animation: animate-details 0.5s ease 6.5s forwards;
@@ -293,8 +302,8 @@
     text-align: left;
     font-size: var(--font-size-11xl);
     color: var(--color-black);
-    font-family: var(--font-inter);
-
+    font-family: var(--font-kaisei-harunoumi);
+    font-weight: 700;
   }
 
   .about-heading{
@@ -302,17 +311,14 @@
     left: 105px;
     font-size: 50px;
     top: -600px;
-    font-family: var(--font-kaisei-harunoumi);
 
   }
   .about{
     position: relative;
-    font-family: var(--font-inter);
     color: var(--color-midnightblue);
     left: 105px;
     font-size: 28px;
     width: 45rem;
-    font-weight: 500;
     top: -500px;
 
 
@@ -323,19 +329,16 @@
     left: 105px;
     top: 400px;
     font-size: 50px;
-    font-family: var(--font-kaisei-harunoumi);
 
   }
   .work-together{
     position: relative;
-    font-family: var(--font-inter);
     color: var(--color-midnightblue);
     left: 105px;
     top: 550px;
 
     font-size: 28px;
     width: 45rem;
-    font-weight: 500;
   }
 
   .skills-heading{
@@ -343,7 +346,6 @@
     left: 105px;
     top: 10rem;
     font-size: 50px;
-    font-family: var(--font-kaisei-harunoumi);
 
   }
 
