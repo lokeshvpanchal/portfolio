@@ -2,6 +2,7 @@ import React from 'react';
 
 import"./project.css";
 import"./Desktop.css";
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 let imageNum = 0;
 
@@ -26,8 +27,13 @@ const Project = ({className = ""})=>{
     // });
     return(
         <div className="projects-section">
-        <div className="projects-heading">My projects<span style={{color:"#3ea7f1"}}>.</span> <hr/></div>
+        <Parallax pages={4}>
+          <ParallaxLayer offset={1}>
+            <div className="projects-heading">My projects<span style={{color:"#3ea7f1"}}>.</span> <hr/></div>
+          </ParallaxLayer>
+          
         <div className="projects">
+        <ParallaxLayer offset={2}>
           <div className="project">
             
           <div className="sliding-img">
@@ -56,6 +62,8 @@ const Project = ({className = ""})=>{
               </div>
             </div>
           </div>
+        </ParallaxLayer>
+          <ParallaxLayer offset={3}>
           <div className="project">
             <div className="project-card">
               <div className="project-card-heading">
@@ -80,8 +88,10 @@ const Project = ({className = ""})=>{
               </div>
             </div>
           </div>
+      </ParallaxLayer>
 
-          <div className="project">
+      <ParallaxLayer offset={4}>    
+        <div className="project">
             <div className="sliding-img">
                 <div className='img-slider zombie-slider'>
                 <img alt="" src="/images/zombiechase/1.png"/>
@@ -108,9 +118,12 @@ const Project = ({className = ""})=>{
 </div>
             </div>
              
-          </div>
+        </div>
+      </ParallaxLayer>
+
             
         </div>
+        </Parallax>
       </div>
 
     );

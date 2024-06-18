@@ -3,7 +3,7 @@
     position: fixed;
     top: 1rem;
     left: 1rem;
-    background-color: rgba(220, 236, 244, 0.535);
+    background-color: #dcecf4; 
     text-shadow: 1px 1px 20px rgb(174, 219, 242);
     width: 98vw;
     height: 98vh;
@@ -221,14 +221,101 @@
   
   }
   .lokesh {
-    text-shadow: #73c4ff;
     top: 421px;
     left: 415px;
-    color: #3ea6f1;
+    text-shadow: none;
+    background: linear-gradient(120deg, #0061ff, #60efff);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     opacity: 0%;
-    animation: name-animate  0.25s ease-in 6.0s forwards; ;
+    /* animation: flicker  2s ease-in 7s forwards;  */
+    animation: combined-animation  2.5s ease-in 6.0s forwards; ;
 
   }
+
+  @keyframes combined-animation {
+    /* name-animate */
+    0% {
+      opacity: 0%;
+      left: 400px;
+    }
+    20% {
+      opacity: 20%;
+      left: 553px;
+    }
+    
+    /* flicker */
+
+    69.99% {
+      text-shadow: none;
+      opacity: 20%;
+      left: 553px;
+
+    }
+    70% {
+      text-shadow: 1px 1px 20px #6bfef8;
+      opacity: 100%;
+      left: 553px;
+
+    }
+
+
+    75% {
+      text-shadow: 1px 1px 20px #6bfef8;
+      opacity: 100%;
+      left: 553px;
+    }
+
+    75.01%{
+      text-shadow: none;
+      opacity: 20%;
+      left: 553px;
+    }
+    99% {
+      text-shadow: none;
+      opacity: 20%;
+      left: 553px;
+
+    }
+    100% {
+      text-shadow: 1px 1px 20px #6bfef8;
+      opacity: 100%;
+      left: 553px;
+
+    }
+  }
+  
+
+  @keyframes flicker {
+    0%{
+      text-shadow: none;
+      opacity: 20%;
+    } 
+    49%{
+      text-shadow: none;
+      opacity: 20%;
+    }
+    50%{
+      text-shadow: 1px 1px 20px rgb(42, 242, 242);
+      opacity: 100%;
+    }
+    53%{
+      text-shadow: none;
+      opacity: 20%;
+    }
+
+    99%{
+      text-shadow: none;
+      opacity: 20%;
+    }
+
+    100%{
+      text-shadow: 1px 1px 20px rgb(42, 242, 242);
+      opacity: 100%;
+    }
+    
+  }
+
   @keyframes name-animate{
     0%{
         opacity: 0%;
@@ -301,7 +388,7 @@
   .desktop-1 {
     text-align: left;
     font-size: var(--font-size-11xl);
-    color: var(--color-black);
+    color: black;
     font-family: var(--font-kaisei-harunoumi);
     font-weight: 700;
   }
