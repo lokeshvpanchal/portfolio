@@ -1,12 +1,17 @@
+body{
+  background-color: #121212;
+  user-select: none;
 
+}
 .desktop-1 {
     position: fixed;
     top: 1rem;
     left: 1rem;
-    background-color: #dcecf4; 
-    text-shadow: 1px 1px 20px rgb(174, 219, 242);
+    bottom: 1rem;
+    background-color: #282828; 
+    text-shadow: 1px 1px 20px black;
     width: 98vw;
-    height: 98vh;
+    height: 96vh;
     overflow: scroll;
   }
 
@@ -22,7 +27,7 @@
     left: 1vw;
     top: 1vh;
     z-index: 600;
-    background-color: #73c4ff;
+    background-color: #5e43f3 ;
     animation: loader_out 1s ease 4s  forwards;
 }
 .loader-page .cup-only{
@@ -198,7 +203,7 @@
   .hi-my-name-container {
     top: 307px;
     left: 100px;
-    color: var(--color-midnightblue);
+    color: white;
   }
   .hi-my-name-container p{
     opacity: 0%;
@@ -221,16 +226,16 @@
   
   }
   .lokesh {
-    top: 421px;
-    left: 415px;
-    text-shadow: none;
-    background: linear-gradient(120deg, #0061ff, #60efff);;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    top: 430px;
+    left: 425px;
+    text-shadow: none; 
+
     opacity: 0%;
     /* animation: flicker  2s ease-in 7s forwards;  */
-    animation: combined-animation  2.5s ease-in 6.0s forwards; ;
-
+    animation: combined-animation  2.5s ease-in 6.0s forwards; 
+    font-family: "Vibur", sans-serif; 
+    font-size: 90px;
+    font-weight: 700;
   }
 
   @keyframes combined-animation {
@@ -253,7 +258,11 @@
 
     }
     70% {
-      text-shadow: 1px 1px 20px #6bfef8;
+      text-shadow:
+      0 0 7px #fff,
+      0 0 82px #f09,
+      0 0 92px #7a5af5,
+      0 0 102px #7a5af5;
       opacity: 100%;
       left: 553px;
 
@@ -261,7 +270,11 @@
 
 
     75% {
-      text-shadow: 1px 1px 20px #6bfef8;
+      text-shadow:
+      0 0 7px #fff,
+      0 0 82px #f09,
+      0 0 92px #7a5af5,
+      0 0 102px #7a5af5;
       opacity: 100%;
       left: 553px;
     }
@@ -278,61 +291,27 @@
 
     }
     100% {
-      text-shadow: 1px 1px 20px #6bfef8;
+      color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 82px #f09,
+      0 0 92px #7a5af5,
+      0 0 102px #7a5af5;
       opacity: 100%;
       left: 553px;
 
     }
   }
-  
 
-  @keyframes flicker {
-    0%{
-      text-shadow: none;
-      opacity: 20%;
-    } 
-    49%{
-      text-shadow: none;
-      opacity: 20%;
-    }
-    50%{
-      text-shadow: 1px 1px 20px rgb(42, 242, 242);
-      opacity: 100%;
-    }
-    53%{
-      text-shadow: none;
-      opacity: 20%;
-    }
 
-    99%{
-      text-shadow: none;
-      opacity: 20%;
-    }
-
-    100%{
-      text-shadow: 1px 1px 20px rgb(42, 242, 242);
-      opacity: 100%;
-    }
-    
-  }
-
-  @keyframes name-animate{
-    0%{
-        opacity: 0%;
-        left:400px;
-    }
-    100%{
-        opacity: 100%;
-        left:553px;
-    }
-  }
   
   .i-am-a-container {
     position: absolute;
     top: 535px;
     left: 105px;
-    color: var(--color-midnightblue);
+    color: #bfbfbf;
     opacity: 0%;
+    font-size: 28px;
     animation: animate-details 0.5s ease 6.5s forwards;
   }
 
@@ -386,9 +365,10 @@
     height: 36px;
   }
   .desktop-1 {
+    border-radius: 1rem;
     text-align: left;
     font-size: var(--font-size-11xl);
-    color: black;
+    color: white;
     font-family: var(--font-kaisei-harunoumi);
     font-weight: 700;
   }
@@ -401,14 +381,27 @@
 
   }
   .about{
+    opacity: 1;
     position: relative;
-    color: var(--color-midnightblue);
+    color: white;
     left: 105px;
     font-size: 28px;
     width: 45rem;
     top: -500px;
+   
+  }
+
+  .aboutAnimate {
+    opacity: 0.4;
+    top: 0;
+    animation-name: fade-in;
+    animation-duration: 2s;
+  }
 
 
+  @keyframes fade-in {
+    from{opacity: 0.5;}
+    to{ opacity: 1;}
   }
 
   .work-together-heading{
@@ -420,10 +413,9 @@
   }
   .work-together{
     position: relative;
-    color: var(--color-midnightblue);
+    color: white;
     left: 105px;
     top: 550px;
-
     font-size: 28px;
     width: 45rem;
   }
@@ -448,8 +440,19 @@ hr{
     width: 100px;
     position: fixed;
     left: 100px;
-    background-color: #3ea7f1;   
-    height: 4px;
+    background-color: #5e43f3;   
+    height: 6px;
     margin: 5px; 
+    border: none;
 }
 
+#pinContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.panel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

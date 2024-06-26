@@ -21,17 +21,17 @@
   }
   
   .button:nth-child(3) {
-    background: linear-gradient(120deg, #b0d1ff, #0063af);
+    background: linear-gradient(120deg, #0063af,#6ef671);
   }
   
   .button:nth-child(2) {
-    background: linear-gradient(120deg, #0077b5, #005c8e);
+    background: linear-gradient(120deg, #0077b5, #000000);
   }
   
 
   
   .button:nth-child(4) {
-    background: linear-gradient(120deg, #000000,  #bdbdbd);
+    background: linear-gradient(120deg, #000000,  #555555);
   }
   
   .button:active {
@@ -43,7 +43,7 @@
     position: absolute;
     width: 55px;
     height: 55px;
-    background-color: midnightblue;
+    background-color: #5e43f3;
     border-radius: 50px;
     z-index: -1;
     border: 0px solid rgba(255, 255, 255, 0.411);

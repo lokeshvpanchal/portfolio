@@ -1,12 +1,12 @@
 import "./Desktop.css";
 import "./global.css";
-import React, {useEffect } from 'react';
-import {ScrollContainer, ScrollPage, Animator, batch, Sticky,Fade, MoveOut} from 'react-scroll-motion';
+import React, {useEffect,useRef } from 'react';
 import Loader from "./Loader";
 import Project from "./projects";
 import Cup from "./Cup";
 import { Parallax,ParallaxLayer } from '@react-spring/parallax';
 import Contacts from "./Contacts";
+import { useInView } from "react-intersection-observer";
 
 function update(event){
     const container = document.querySelector(".grid");
@@ -31,13 +31,53 @@ function update(event){
 	container.style.setProperty("--y", ratioY);
 }// update
 
+
+
+var mousedownat=0;
 const Desktop = ({ className = "" }) => {
-  
+    const{ref: myRef ,inView: aboutIsVisible} = useInView();
+    const{ref: bigbull ,inView: bigbullIsVisible} = useInView();
+    const{ref: cantstop ,inView: cantstopIsVisible} = useInView();
+    const{ref: zombiechase ,inView: zombiechaseIsVisible} = useInView();
+
+    const track =document.getElementById('image-track')
+    
     useEffect(() => {
         window.addEventListener("mousemove", update);
+        window.onmousedown = e=>{
+            track.dataset.mouseDownAt = e.clientX;
+          
+        }
+        window.onmouseup = e=>{
+            track.dataset.mouseDownAt = "0";
+          track.dataset.prevPercentage = track.dataset.percentage;
+          
+          
+        }
+        window.onmousemove = e =>{
+          
+          if(track.dataset.mouseDownAt =="0")return;
+
+          const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+                maxDelta = window.innerWidth/1.5;
+          var percentage = (mouseDelta / maxDelta *-100),
+          nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+          if(nextPercentage>0){nextPercentage=0;}
+          if(nextPercentage<-70){nextPercentage =-70;}
+          track.dataset.percentage = nextPercentage;
+          track.animate({transform :`translate(${nextPercentage}%,50%)`},{duration:1800, fill: "forwards"});
+          for(const image of track.getElementsByClassName('image')){
+            image.animate({objectPosition :`${nextPercentage *100/-70}% 50%`},{duration:1800, fill:"forwards"})
+          }
+
+        }
     });
+       
+     
   return (
   <div >
+
+<link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'/>
     <div className="loader-page">
         <Loader/>
         <Cup/>
@@ -49,15 +89,15 @@ const Desktop = ({ className = "" }) => {
       <Contacts/>
     </div>
     
-    <Parallax pages={7.05} style={{height:"750px"}}>
+    <Parallax pages={8.05} style={{height:"750px"}}>
 
-      <ParallaxLayer sticky={{start:0,end:4}}>
+      <ParallaxLayer sticky={{start:0,end:1}}>
       <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" style={{textDecoration:"none",color:"black"}}>
   hire me!
 </a>
 
       </ParallaxLayer>
-      <ParallaxLayer className ="avatar-comp" sticky={{start:0 , end:1}}>
+      <ParallaxLayer className ="avatar-comp" sticky={{start:0 , end:1.1}}>
       <img className="image-1-icon" src="/avatar-bg.png" />
       <div className="avatar">
         <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
@@ -93,15 +133,15 @@ const Desktop = ({ className = "" }) => {
 
       <ParallaxLayer offset={1} speed={1.4} >
       <div className="about-heading">
-        About <span style={{color:"#3ea7f1"}}>me.</span>
+        About <span style={{color:"#5e43f3"}}>me.</span>
         <hr/>
       </div>
       </ParallaxLayer>
       <ParallaxLayer offset={1} speed={1.5}> 
-      <div className="about" >
+      <div className={`about ${aboutIsVisible? 'aboutAnimate' :''}`}  >
       I am your friendly neighborhood Computer Science enthusiast
       and I'm on a quest to master the art of full-stack web development,
-      <span style={{color:"#3ea7f1"}}> one line of code at a time. </span>
+      <span style={{color:"#5e43f3"}}> one line of code at a time. </span>
        Recently, I've also started diving into the fascinating world of machine learning,
       expanding my skill set and exploring new horizons in technology.
 
@@ -109,7 +149,7 @@ const Desktop = ({ className = "" }) => {
     </ParallaxLayer>
     <ParallaxLayer offset={1} speed={0.7} >
       <div className="work-together-heading">
-        Let's work together<span style={{color:"#3ea7f1"}}>.</span>
+        Let's work together<span style={{color:"#5e43f3"}}>.</span>
         <hr/>
       </div>
       </ParallaxLayer>
@@ -122,34 +162,31 @@ const Desktop = ({ className = "" }) => {
       </div>
     </ParallaxLayer>
     <div className="projects-section">
-          <ParallaxLayer offset={2}>
-            <ScrollContainer>
-              <ScrollPage page={0}>
-                <Animator animation={ batch(Sticky(),Fade())}>
-                  <img className ="cloud1" src="/images/cloud1.png" style={{height:"40rem"}}></img>
-                </Animator>
-            </ScrollPage>
-            <div className="projects-heading">My projects<span style={{color:"#3ea7f1"}}>.</span> <hr/></div>
-            </ScrollContainer>
+          <ParallaxLayer offset={2.5}>
+            <div style={{display:"flex", alignContent:"center"}}>
+              <img className ="cloud1" src="/images/myprojects.png" style={{width:"50vw"}}></img>
+              <div className="myProjects">My projects<span style={{color:"#5e43f3"}}>.</span></div>
 
+           </div>
+            
           </ParallaxLayer>
           
         <div className="projects">
-        <ParallaxLayer offset={3}>
+        <ParallaxLayer offset={3.5}>
           <div className="project">
             
-          <div className="sliding-img">
-                <div className='img-slider'>
-                <img alt="" src="/images/bigbull/1.png"/>
-                <img alt="" src="/images/bigbull/2.png"/>
-                <img alt="" src="/images/bigbull/3.png"/>
-                <img alt="" src="/images/bigbull/4.png"/>
-                <img alt="" src="/images/bigbull/5.png"/>
-                <img alt="" src="/images/bigbull/6.png"/>
-                <img alt="" src="/images/bigbull/7.png"/>
-                </div>
+          {/* <div  className="sliding-img"> */}
+              <div ref={bigbull} id="image-track" data-mouse-down-at="0" data-prev-percentage= "0" draggable="false">
+                <img alt="" className="image" src="/images/bigbull/1.png" draggable="false"/>
+                <img alt=""  className="image" src="/images/bigbull/2.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/bigbull/3.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/bigbull/4.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/bigbull/5.png"draggable="false"/>
+                <img alt="" className="image" src="/images/bigbull/6.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/bigbull/7.png"draggable="false"/>
+              </div>
                 
-            </div>
+            {/* </div> */}
           <div className="project-card">
               <div className="project-card-heading">
                 The Big Bull
@@ -165,21 +202,32 @@ const Desktop = ({ className = "" }) => {
             </div>
           </div>
         </ParallaxLayer>
-          <ParallaxLayer offset={4}>
+          <ParallaxLayer offset={4.5}>
           <div className="project">
+          <div ref={cantstop} className="image-track" data-mouse-down-at="0" data-prev-percentage= "0" draggable="false">
+                <img alt="" className="image" src="/images/cantstop/1.png" draggable="false"/>
+                <img alt=""  className="image" src="/images/cantstop/2.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/cantstop/3.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/cantstop/4.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/cantstop/5.png"draggable="false"/>
+                <img alt="" className="image" src="/images/cantstop/6.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/cantstop/7.png"draggable="false"/>
+              </div>
+
             <div className="project-card">
               <div className="project-card-heading">
                   Can't Stop
               </div>
               <hr/>
+
               <div className="project-details">
               - Java, Java Swing<br/><br/>
               
               Can't Stop is a virtual version of the popular board game, designed to provide an engaging and accessible gaming experience. Developed by a team of five for an academic project, the game features a non-human player for solo play, a color blind mode for enhanced accessibility, and adjustable difficulty levels to cater to all skill levels. Players can save their progress and load saved games, ensuring a seamless and enjoyable experience. 
               </div>
             </div>
-            <div className="sliding-img ">
-              <div className='cantstop-slider img-slider'>
+            {/* <div className="sliding-img">
+              <div className='cantstop-slider img-slider' data-mouse-down-at="0">
                 <img alt="" src="/images/cantstop/7.png"/>
                 <img alt="" src="/images/cantstop/6.png"/>
                 <img alt="" src="/images/cantstop/5.png"/>
@@ -188,14 +236,15 @@ const Desktop = ({ className = "" }) => {
                 <img alt="" src="/images/cantstop/2.png"/>
                 <img alt="" src="/images/cantstop/1.png"/>
               </div>
-            </div>
+            </div> */}
+           
           </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={5}>    
+      <ParallaxLayer offset={5.5}>    
         <div className="project">
-            <div className="sliding-img">
-                <div className='img-slider zombie-slider'>
+            {/* <div className="sliding-img">
+                <div className='img-slider zombie-slider' data-mouse-down-at="0">
                 <img alt="" src="/images/zombiechase/1.png"/>
                 <img alt="" src="/images/zombiechase/2.png"/>
                 <img alt="" src="/images/zombiechase/3.png"/>
@@ -203,7 +252,16 @@ const Desktop = ({ className = "" }) => {
 
                 </div>
                 
-            </div>
+            </div> */}
+              <div ref={zombiechase} className="image-track" data-mouse-down-at="0" data-prev-percentage= "0" draggable="false">
+                <img alt="" className="image" src="/images/zombiechase/1.png" draggable="false"/>
+                <img alt=""  className="image" src="/images/zombiechase/2.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/zombiechase/3.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/zombiechase/4.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/zombiechase/5.png"draggable="false"/>
+                <img alt="" className="image" src="/images/zombiechase/6.png"draggable="false"/>
+                <img alt="" className="image"  src="/images/zombiechase/7.png"draggable="false"/>
+              </div>
             <div className="project-card">
               <div className="project-card-heading">
                   Zombie chase
@@ -226,7 +284,10 @@ const Desktop = ({ className = "" }) => {
             
         </div>
       </div>
-    <ParallaxLayer offset={6} speed={1}>
+    <ParallaxLayer offset={7} speed={1}>
+    {/* <div ref={myRef} className={`about ${aboutIsVisible? 'aboutAnimate' :''}`}  >
+      {aboutIsVisible?'yes':'no'}
+           </div> */}
       <div className="skills-heading">Skills <hr/></div>
       
       <img className="skill-img" src="/images/skills.jpeg"></img>
@@ -238,6 +299,7 @@ const Desktop = ({ className = "" }) => {
 
     </div>
   );
+  
 };
 
 
