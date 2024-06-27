@@ -1,0 +1,248 @@
+
+.parts{
+    position: fixed;
+}
+
+#part1{
+    height: 4.5rem;
+    left: 4.5rem;
+    top: 0.7rem;
+    animation: join1 4s infinite;
+}
+
+@keyframes join1 {
+    0%{
+        left: 10rem;
+        top:5rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        left: 4.5rem;
+        top: 0.7rem;
+    }
+}
+
+#part2{
+    height: 7.5rem;
+    top: 7.4rem;
+    left: 18.2rem;
+    animation: join2 4s infinite;
+}
+
+
+@keyframes join2 {
+    0%{
+        left: 10rem;
+        top:5rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 7.4rem;
+        left: 18.2rem;
+    }
+}
+
+#part3{
+    height: 9.8rem;
+    top: 14.8rem;
+    left: 13.3rem;
+    animation: join3 4s infinite;
+
+}
+
+@keyframes join3 {
+    0%{
+        left: 50rem;
+        top:10rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 14.8rem;
+        left: 13.3rem;
+    }
+}
+
+#part4{
+    height: 7.3rem;
+    top: 7.7rem;
+    left: 13.9rem;
+    animation: join4 4s infinite;
+
+}
+@keyframes join4 {
+    0%{
+        left: 10rem;
+        top:50rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 7.7rem;
+        left: 13.9rem;
+    }
+}
+
+#part5{
+    height: 4.5rem;
+    top: 16.6rem;
+    left: 14.2rem;
+    animation: join5 4s infinite;
+}
+
+@keyframes join5 {
+    0%{
+        left: 10rem;
+        top:50rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 16.6rem;
+        left: 14.2rem;
+    }
+}
+
+#part6{
+    height: 4.2rem;
+    top: 17.4rem;
+    left: 26.32rem;
+}
+
+@keyframes join6 {
+    0%{
+        left: 10rem;
+        top:50rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 17.4rem;
+        left: 26.32rem;
+    }
+}
+
+#part7{
+    height: 10.5rem;
+    top: 26.4rem;
+    left: 17.32rem;
+}
+@keyframes join7 {
+    0%{
+        left: 10rem;
+        top:50rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 26.4rem;
+    left: 17.32rem;
+    }
+}
+
+#part8{
+    height: 3.5rem;
+    top: 27.4rem;
+    left: 18.82rem;
+}
+
+@keyframes join8 {
+    0%{
+        left: 20rem;
+        top:50rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 27.4rem;
+    left: 18.82rem;
+    }
+}
+
+#part9{
+    height: 6.5rem;
+    top: 28.8rem;
+    left: 18.42rem;
+}
+@keyframes join9 {
+    0%{
+        left: 12rem;
+        top:23rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 28.8rem;
+    left: 18.42rem;
+    }
+}
+
+#part10{
+    height: 2.7rem;
+    top: 24.1rem;
+    left: 19.32rem;
+}
+@keyframes join10 {
+    0%{
+        left: 50rem;
+        top:20rem;
+    }
+    10%,20%,30%{
+        transform: rotate(20deg);
+    }
+    5%,15%,25%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        top: 24.1rem;
+    left: 19.32rem;
+    }
+}

@@ -431,9 +431,35 @@ body{
   .skill-img{
     position: relative;
     top: 18rem;
-    left: 12rem;
-    height: 20rem;
+    left: 7rem;
+    height: 9rem;
+    margin: 0.5rem;
+    box-shadow: #fff 10px;
+    animation: magnify 1s infinite;
+  }
 
+  @keyframes magnify {
+    0%,100%{
+      height: 9rem;
+      margin: 0.5rem;
+    }
+    50%{
+      height: 8.5rem;
+      margin: 0.7rem;
+    }
+
+  }
+
+  .skills{
+    width: 85vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #mongodb-img{
+    height: 8rem;
+    width: 20rem;
   }
 
 hr{
