@@ -74,7 +74,7 @@ const Desktop = ({ className = "" }) => {
               if(nextPercentage>0){nextPercentage=0;}
               if(nextPercentage<-70){nextPercentage =-70;}
               track.dataset.percentage = nextPercentage;
-              track.animate({transform :`translate(${nextPercentage}%,50%)`},{duration:1800, fill: "forwards"});
+              track.animate({transform :`translate(${nextPercentage}%,70%)`},{duration:1800, fill: "forwards"});
               for(const image of track.getElementsByClassName('image')){
                 image.animate({objectPosition :`${nextPercentage *100/-70}% 50%`},{duration:1800, fill:"forwards"})
               }
