@@ -86,7 +86,7 @@ const Desktop = ({ className = "" }) => {
        
      
   return (
-  <div >
+  <body className={`desktop-1`}>
 
 <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'/>
 <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet"></link>
@@ -96,7 +96,6 @@ const Desktop = ({ className = "" }) => {
 
     </div>
     
-    <div className={`desktop-1`} >
     <div className="contact">
       <Contacts/>
     </div>
@@ -352,9 +351,7 @@ const Desktop = ({ className = "" }) => {
                 <img alt=""  className="image" src="/images/zombiechase/2.png"draggable="false"/>
                 <img alt="" className="image"  src="/images/zombiechase/3.png"draggable="false"/>
                 <img alt="" className="image"  src="/images/zombiechase/4.png"draggable="false"/>
-                <img alt="" className="image"  src="/images/zombiechase/5.png"draggable="false"/>
-                <img alt="" className="image" src="/images/zombiechase/6.png"draggable="false"/>
-                <img alt="" className="image"  src="/images/zombiechase/7.png"draggable="false"/>
+               
               </div>
             <div className="project-card">
               <div className="project-card-heading">
@@ -422,9 +419,9 @@ const Desktop = ({ className = "" }) => {
 
       </Parallax>
 
-    </div>
 
-    </div>
+
+    </body>
   );
   
 };
