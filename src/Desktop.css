@@ -1,8 +1,7 @@
 body{
   background-color: #121212;
   user-select: none;
-
-
+  overflow: hidden;
 }
 .desktop-1 {
     position: fixed;
@@ -12,7 +11,9 @@ body{
     background-color: #282828; 
     text-shadow: 1px 1px 20px black;
     width: 98vw;
-    height: 96vh;
+    height: 96vh;  
+    overflow: hidden;
+
   }
 
 .contact{
