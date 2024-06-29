@@ -17,7 +17,7 @@ body{
 
 .contact{
   position: fixed;
-  z-index: 10000000;
+  z-index: 100;
 }
 
 .loader-page{
@@ -27,6 +27,7 @@ body{
     left: 1vw;
     top: 1vh;
     z-index: 600;
+    border-radius: 1rem;
     background-color: #5e43f3 ;
     animation: loader_out 1s ease 4s  forwards;
 }
@@ -547,3 +548,4 @@ hr{
       transform: rotate(45deg) translate(20px, 20px);
   }
 }
+
