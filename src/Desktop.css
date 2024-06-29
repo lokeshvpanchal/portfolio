@@ -128,18 +128,23 @@ body{
     width: 63px;
     height: 46px;
   }
-  .hire-me,
-  .image-1-icon {
+  .hire-me{
     position: absolute;
     top: 57px;
+    z-index: 500;
     left: 1291px;
     display: flex;
     align-items: center;
     background-color: transparent;
     border: none;
+    color: #717171;
     font-size: 20px;
     font-family: var(--font-italiana);
     text-decoration: none;
+  }
+
+  .hire-me:hover{
+    color: #fff;
   }
 
   .avatar-comp{
@@ -227,11 +232,10 @@ body{
   }
   .lokesh {
     top: 430px;
-    left: 425px;
+    left: 475px;
     text-shadow: none; 
 
     opacity: 0%;
-    /* animation: flicker  2s ease-in 7s forwards;  */
     animation: combined-animation  2.5s ease-in 6.0s forwards; 
     font-family: "Vibur", sans-serif; 
     font-size: 90px;
@@ -246,7 +250,7 @@ body{
     }
     20% {
       opacity: 20%;
-      left: 553px;
+      left: 593px;
     }
     
     /* flicker */
@@ -254,7 +258,7 @@ body{
     69.99% {
       text-shadow: none;
       opacity: 20%;
-      left: 553px;
+      left: 593px;
 
     }
     70% {
@@ -264,7 +268,7 @@ body{
       0 0 92px #7a5af5,
       0 0 102px #7a5af5;
       opacity: 100%;
-      left: 553px;
+      left: 593px;
 
     }
 
@@ -276,18 +280,18 @@ body{
       0 0 92px #7a5af5,
       0 0 102px #7a5af5;
       opacity: 100%;
-      left: 553px;
+      left: 593px;
     }
 
     75.01%{
       text-shadow: none;
       opacity: 20%;
-      left: 553px;
+      left: 593px;
     }
     99% {
       text-shadow: none;
       opacity: 20%;
-      left: 553px;
+      left: 593px;
 
     }
     100% {
@@ -298,7 +302,7 @@ body{
       0 0 92px #7a5af5,
       0 0 102px #7a5af5;
       opacity: 100%;
-      left: 553px;
+      left: 593px;
 
     }
   }
@@ -311,7 +315,7 @@ body{
     left: 105px;
     color: #bfbfbf;
     opacity: 0%;
-    font-size: 28px;
+    font-size: 26px;
     animation: animate-details 0.5s ease 6.5s forwards;
   }
 
@@ -345,6 +349,25 @@ body{
 
   }
   
+ .scroll-letter{
+  position: relative;
+    animation: waveAnim 1s infinite;
+    display: inline-block;
+    letter-spacing: 2px;
+    animation-delay: calc(.1s *var(--i));
+  }
+
+  @keyframes waveAnim {
+    0%,40%,100%{
+      transform: translateY(0);
+    }
+    20%{
+      transform: translateY(-10px);
+    }
+  }
+
+
+
   .desktop-1-inner {
     top: 319px;
     left: 931px;
@@ -369,8 +392,8 @@ body{
     text-align: left;
     font-size: var(--font-size-11xl);
     color: white;
-    font-family: var(--font-kaisei-harunoumi);
-    font-weight: 700;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 500;
   }
 
   .about-heading{
@@ -385,7 +408,7 @@ body{
     position: relative;
     color: white;
     left: 105px;
-    font-size: 28px;
+    font-size: 25px;
     width: 45rem;
     top: -500px;
    
@@ -416,7 +439,7 @@ body{
     color: white;
     left: 105px;
     top: 550px;
-    font-size: 28px;
+    font-size: 25px;
     width: 45rem;
   }
 
@@ -481,4 +504,46 @@ hr{
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.arrow {
+  position: relative;
+  top: 6rem;
+  left: -1rem;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+  }
 }

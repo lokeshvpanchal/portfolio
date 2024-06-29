@@ -70,7 +70,7 @@
 }
 
 .project-card-heading{
-    font-family: var(--font-kaisei-harunoumi);
+    font-family: "Playwrite DE Grund", cursive;
     font-size: 40px;
     position: relative;
     top: -8rem;
@@ -117,7 +117,7 @@
     height: 50vmin;
     overflow: hidden;
     object-fit: cover;
-    object-position: 100% 50%;
+    object-position: 0% 50%;
     border-radius: 0.5rem;
 }
 
@@ -127,6 +127,7 @@
     user-select: none;
     gap: 2vmin;
     display: flex;
+    left: 2.5rem;
     align-items: center;
     max-height: 10vh;
     max-width: 280vw;
@@ -137,12 +138,6 @@
 #zombiechase{
     max-width: 150vw;
 }
-
-
-/* #image-track img:hover{
-     animation: smaller 1s forwards;   
-} */
-
 
 @keyframes smaller {
     0%{
