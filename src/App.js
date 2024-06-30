@@ -3,7 +3,7 @@ import Desktop from './desktop';
 
 function App() {
   return (
-         <Desktop/>
+    <Desktop/>
   );
 }
 

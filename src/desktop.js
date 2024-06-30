@@ -100,7 +100,7 @@ const Desktop = ({ className = "" }) => {
       <Contacts/>
     </div>
     
-    <Parallax pages={8.35} style={{height:"750px"}}>
+    <Parallax pages={8.35}>
 
       <ParallaxLayer sticky={{start:0,end:1}}>
       <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
@@ -108,8 +108,8 @@ const Desktop = ({ className = "" }) => {
 </a>
 
       </ParallaxLayer>
-      <ParallaxLayer className ="avatar-comp" sticky={{start:0 , end:1.1}}>
-      <img className="image-1-icon" src="/avatar-bg.png" />
+      <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 600 ? 2.5: null}offset={window.innerWidth < 600 ? 0.2: null} sticky={window.innerWidth>600 ?{start:0 , end:1.1}: null}>
+      <img className="image-1-icon" style={{"z-index":-1}}src="/avatar-bg.png" />
       <div className="avatar">
         <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
         <div class="grid">
@@ -215,7 +215,9 @@ const Desktop = ({ className = "" }) => {
                   <span></span>
                   <span></span>
                   <span></span>
+                  <div>drag</div>
               </div>
+
 
                 <img alt="" className="image" src="/images/bigbull/1.png" draggable="false"/>
                 <img alt=""  className="image" src="/images/bigbull/2.png"draggable="false"/>
@@ -269,6 +271,8 @@ const Desktop = ({ className = "" }) => {
                   <span></span>
                   <span></span>
                   <span></span>
+                  <div>drag</div>
+
                 </div>
                 <img alt="" className="image" src="/images/cantstop/1.png" draggable="false"/>
                 <img alt=""  className="image" src="/images/cantstop/2.png"draggable="false"/>
@@ -346,6 +350,7 @@ const Desktop = ({ className = "" }) => {
                     <span></span>
                     <span></span>
                     <span></span>
+                    <div>drag</div>
                 </div>
                 <img alt="" className="image" src="/images/zombiechase/1.png" draggable="false"/>
                 <img alt=""  className="image" src="/images/zombiechase/2.png"draggable="false"/>
