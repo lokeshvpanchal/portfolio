@@ -1,5 +1,6 @@
 import React from 'react';
 import"./loader.css";
+import Cup from './Cup';
 
 const Loader = ({className = ""})=>{
     return(
@@ -10,6 +11,7 @@ const Loader = ({className = ""})=>{
      <div className="coffee-header__buttons coffee-header__button-two"></div>
      <div className="coffee-header__display"></div>
      <div className="coffee-header__details"></div>
+
    </div>
    <div className="coffee-medium">
      <div className="coffe-medium__exit"></div>

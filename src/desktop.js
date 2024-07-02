@@ -93,14 +93,13 @@ const Desktop = ({ className = "" }) => {
     <div className="loader-page">
         <Loader/>
         <Cup/>
-
     </div>
     
     <div className="contact">
       <Contacts/>
     </div>
     
-    <Parallax pages={8.35}>
+    <Parallax pages={window.innerWidth < 768? 10 : 8.35}>
 
       <ParallaxLayer sticky={{start:0,end:1}}>
       <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
@@ -181,8 +180,9 @@ const Desktop = ({ className = "" }) => {
       </div>
     </ParallaxLayer>
     <div className="projects-section">
-          <ParallaxLayer offset={2.5}>
+          <ParallaxLayer offset={window.innerWidth < 768? 2 : 2.5}>
             <div ref={myproject} style={{display:"flex", alignContent:"center"}}>
+              <div className="coolme">
               <img alt= "" id="bg"className ="cloud1" src="/images/myproject/bg.png" style={{width:"46rem"}}></img>
               <img alt= "" className={`parts part1 ${myprojectIsVisible? 'in-view' :''}`} id="part1" src="/images/myproject/part1.png"></img>
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part2" src="/images/myproject/part2.png"></img>
@@ -194,23 +194,20 @@ const Desktop = ({ className = "" }) => {
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part8" src="/images/myproject/part8.png"></img>
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part9" src="/images/myproject/part9.png"></img>
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part10" src="/images/myproject/part10.png"></img>
-
-
-
-
-
+              </div>
               <div className="myProjects">My projects<span style={{color:"#5e43f3"}}>.</span></div>
 
            </div>
+
             
           </ParallaxLayer>
           
         <div className="projects">
-        <ParallaxLayer offset={3.7}>
+        <ParallaxLayer offset={window.innerWidth < 768? 3.2 : 3.7}>
           <div className="project">
             
           {/* <div  className="sliding-img"> */}
-              <div ref={bigbull} className="image-track" data-mouse-down-at="0" data-prev-percentage= "0" data-visible ={`${bigbullIsVisible? 1 :0}`} draggable="false">
+              <div ref={bigbull} className={window.innerWidth < 768? "bigbull-slider img-slider": "image-track"} data-mouse-down-at="0" data-prev-percentage= "0" data-visible ={`${bigbullIsVisible? 1 :0}`} draggable="false">
               <div class="arrow">
                   <span></span>
                   <span></span>
@@ -231,7 +228,7 @@ const Desktop = ({ className = "" }) => {
             {/* </div> */}
           <div className="project-card">
               <div className="project-card-heading">
-                <div> The Big Bull <hr/> </div>
+                <div className="project-name"> The Big Bull <hr/> </div>
                 
                 <div className="project-tech"> <br/>-JavaScript, HTML, CSS, MongoDB, Node.js, Express.js, Ajax, Axios, Mocha.</div>
               </div>
@@ -264,16 +261,16 @@ const Desktop = ({ className = "" }) => {
             </div>
           </div>
         </ParallaxLayer>
-          <ParallaxLayer offset={5}>
+          <ParallaxLayer offset={window.innerWidth < 768? 5 : 5}>
           <div className="project">
-          <div ref={cantstop} id="cantstop" className="image-track" data-mouse-down-at="0" data-prev-percentage= "0" data-visible={`${cantstopIsVisible? 1:0}`} draggable="false">
+          <div ref={cantstop} id="cantstop" className={window.innerWidth < 768? "cantstop-slider img-slider": "image-track"}data-mouse-down-at="0" data-prev-percentage= "0" data-visible={`${cantstopIsVisible? 1:0}`} draggable="false">
                 <div class="arrow">
                   <span></span>
                   <span></span>
                   <span></span>
                   <div>drag</div>
-
                 </div>
+
                 <img alt="" className="image" src="/images/cantstop/1.png" draggable="false"/>
                 <img alt=""  className="image" src="/images/cantstop/2.png"draggable="false"/>
                 <img alt="" className="image"  src="/images/cantstop/3.png"draggable="false"/>
@@ -333,7 +330,7 @@ const Desktop = ({ className = "" }) => {
           </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={6.2}>    
+      <ParallaxLayer offset={window.innerWidth < 768? 6.8 : 6.2}>    
         <div className="project">
             {/* <div className="sliding-img">
                 <div className='img-slider zombie-slider' data-mouse-down-at="0">
@@ -345,7 +342,7 @@ const Desktop = ({ className = "" }) => {
                 </div>
                 
             </div> */}
-              <div ref={zombiechase} id="zombiechase" className="image-track" data-mouse-down-at="0" data-prev-percentage= "0" draggable="false" data-visible={`${zombiechaseIsVisible? 1 :0}`}>
+              <div ref={zombiechase} id="zombiechase" className={window.innerWidth < 768? "zombie-slider img-slider": "image-track"}data-mouse-down-at="0" data-prev-percentage= "0" draggable="false" data-visible={`${zombiechaseIsVisible? 1 :0}`}>
                 <div class="arrow">
                     <span></span>
                     <span></span>
@@ -399,7 +396,7 @@ const Desktop = ({ className = "" }) => {
             
         </div>
       </div>
-    <ParallaxLayer offset={7.5} speed={1}>
+    <ParallaxLayer offset={window.innerWidth < 768?9 : 7.5} speed={1}>
     {/* <div ref={myRef} className={`about ${aboutIsVisible? 'aboutAnimate' :''}`}  >
       {aboutIsVisible?'yes':'no'}
            </div> */}
