@@ -132,14 +132,14 @@
     left: 2.5rem;
     align-items: center;
     max-height: 10vh;
-    max-width: 260rem;
+    max-width: 250rem;
     position: absolute;
     transform: translate(0%,70%);
 
 }
 
 #zombiechase{
-    max-width: 155rem;
+    max-width: 145rem;
 }
 
 @keyframes smaller {
