@@ -99,7 +99,7 @@ const Desktop = ({ className = "" }) => {
       <Contacts/>
     </div>
     
-    <Parallax pages={window.innerWidth < 768? 13 : 8.35}>
+    <Parallax pages={window.innerWidth < 768? 12.3 : 8.35}>
 
       <ParallaxLayer sticky={{start:0,end:1}}>
       <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
@@ -180,7 +180,7 @@ const Desktop = ({ className = "" }) => {
       </div>
     </ParallaxLayer>
     <div className="projects-section">
-          <ParallaxLayer offset={window.innerWidth < 768? 2 : 2.5}>
+          <ParallaxLayer offset={window.innerWidth < 768? 2.35 : 2.5}>
             <div ref={myproject} style={{display:"flex", alignContent:"center"}}>
               <div className="coolme">
               <img alt= "" id="bg"className ="cloud1" src="/images/myproject/bg.png" style={{width:"46rem"}}></img>
@@ -203,7 +203,7 @@ const Desktop = ({ className = "" }) => {
           </ParallaxLayer>
           
         <div className="projects">
-        <ParallaxLayer offset={window.innerWidth < 768? 3 : 3.7}>
+        <ParallaxLayer offset={window.innerWidth < 768? 3.3 : 3.7}>
           <div className="project">
             
           {/* <div  className="sliding-img"> */}
@@ -234,7 +234,7 @@ const Desktop = ({ className = "" }) => {
               </div>
              
               <div className="project-details">
-                <div style={{width:"70vw"}}>
+                <div className="project-details-text">
                   The Big Bull is an interactive stock trading web application designed to simulate real-world trading and enhance learning without financial risk. It features real-time stock data, user authentication, portfolio management, watchlists, a trading panel for buying and selling stocks, and a competitive leaderboard to track user performance.
 
                 </div>
@@ -291,7 +291,7 @@ const Desktop = ({ className = "" }) => {
               </div>
 
               <div className="project-details">
-              <div style={{width:"70vw"}}>
+              <div className="project-details-text">
               Can't Stop is a virtual version of the popular board game, designed to provide an engaging and accessible gaming experience. Developed by a team of five for an academic project, the game features a non-human player for solo play, a color blind mode for enhanced accessibility, and adjustable difficulty levels to cater to all skill levels. Players can save their progress and load saved games, ensuring a seamless and enjoyable experience. 
 
               </div>
@@ -330,7 +330,7 @@ const Desktop = ({ className = "" }) => {
           </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={window.innerWidth < 768? 9 : 6.2}>    
+      <ParallaxLayer offset={window.innerWidth < 768? 8.5 : 6.2}>    
         <div className="project">
             {/* <div className="sliding-img">
                 <div className='img-slider zombie-slider' data-mouse-down-at="0">
@@ -365,7 +365,7 @@ const Desktop = ({ className = "" }) => {
               </div>
 
               <div className="project-details">
-              <div style={{width:"70vw"}}>
+              <div className="project-details-text">
                 Zombie Chase is an action-packed shooting game developed in Unreal Engine using Blueprints. In this thrilling game, players must cross a zombie-infested bridge, picking up weapons and battling hordes of zombies along the way. HealthKits are strategically placed to help players restore their health and continue their journey. With immersive graphics and intense gameplay, Zombie Chase offers an exhilarating experience for all zombie survival enthusiasts.
               </div>
   
@@ -396,7 +396,7 @@ const Desktop = ({ className = "" }) => {
             
         </div>
       </div>
-    <ParallaxLayer offset={window.innerWidth < 768?12 : 8.5} speed={1}>
+    <ParallaxLayer offset={window.innerWidth < 768?11.5 : 7.5} speed={1}>
     {/* <div ref={myRef} className={`about ${aboutIsVisible? 'aboutAnimate' :''}`}  >
       {aboutIsVisible?'yes':'no'}
            </div> */}

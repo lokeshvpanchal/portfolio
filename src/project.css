@@ -348,6 +348,10 @@
     width: 43.8rem;
 }
 
+.project-details-text{
+    width: 60vw;
+}
+
 @media screen and (max-width: 768px){
     .myProjects{
         left: 20vw;
@@ -373,6 +377,10 @@
         left: 20vw;
         text-align: left;
         flex-wrap: wrap;
+    }
+    .project-details-text{
+        width: 70vw;
+        font-size: 18px;
     }
 
     .image{
