@@ -99,7 +99,7 @@ const Desktop = ({ className = "" }) => {
       <Contacts/>
     </div>
     
-    <Parallax pages={window.innerWidth < 768? 12.3 : 8.35}>
+    <Parallax pages={window.innerWidth < 768? 12.3 : 8.6}>
 
       <ParallaxLayer sticky={{start:0,end:1}}>
       <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
@@ -396,7 +396,7 @@ const Desktop = ({ className = "" }) => {
             
         </div>
       </div>
-    <ParallaxLayer offset={window.innerWidth < 768?11.5 : 7.5} speed={1}>
+    <ParallaxLayer offset={window.innerWidth < 768?11.5 : 7.99} speed={1}>
     {/* <div ref={myRef} className={`about ${aboutIsVisible? 'aboutAnimate' :''}`}  >
       {aboutIsVisible?'yes':'no'}
            </div> */}
