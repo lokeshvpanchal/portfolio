@@ -355,6 +355,8 @@
 @media screen and (max-width: 768px){
     .myProjects{
         left: 20vw;
+        font-size: 90px;
+        width: 60vw;
     }
     .projects{
         left: 0px;
