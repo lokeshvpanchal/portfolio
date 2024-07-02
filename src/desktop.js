@@ -107,7 +107,7 @@ const Desktop = ({ className = "" }) => {
 </a>
 
       </ParallaxLayer>
-      <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 600 ? 2.5: null}offset={window.innerWidth < 600 ? 0.2: null} sticky={window.innerWidth>600 ?{start:0 , end:1.1}: null}>
+      <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 768 ? 2.5: null}offset={window.innerWidth < 768 ? 0.2: null} sticky={window.innerWidth>768 ?{start:0 , end:1.1}: null}>
       <img className="image-1-icon" style={{"z-index":-1}}src="/avatar-bg.png" />
       <div className="avatar">
         <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
