@@ -153,6 +153,7 @@
 }
 
 .bigbull-slider{
+    top: 500px;
     animation: slider-7pic 16s ease-in-out 0s infinite;
 }
 

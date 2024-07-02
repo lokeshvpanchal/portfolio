@@ -58,3 +58,9 @@
   color: #fff;
   transform: translate3d(0, 0, 1em);
 }
+
+@media screen and (max-width:768px){
+  .cube,.side{
+    width: 50vw;
+  }
+}
