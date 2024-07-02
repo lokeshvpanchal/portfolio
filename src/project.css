@@ -371,7 +371,7 @@
     .project-details{
         width: 69vw;
         left: 20vw;
-
+        text-align: left;
         flex-wrap: wrap;
     }
 

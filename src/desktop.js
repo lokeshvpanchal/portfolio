@@ -234,7 +234,7 @@ const Desktop = ({ className = "" }) => {
               </div>
              
               <div className="project-details">
-                <div style={{width:"60vw"}}>
+                <div style={{width:"70vw"}}>
                   The Big Bull is an interactive stock trading web application designed to simulate real-world trading and enhance learning without financial risk. It features real-time stock data, user authentication, portfolio management, watchlists, a trading panel for buying and selling stocks, and a competitive leaderboard to track user performance.
 
                 </div>
@@ -291,7 +291,7 @@ const Desktop = ({ className = "" }) => {
               </div>
 
               <div className="project-details">
-              <div style={{width:"60vw"}}>
+              <div style={{width:"70vw"}}>
               Can't Stop is a virtual version of the popular board game, designed to provide an engaging and accessible gaming experience. Developed by a team of five for an academic project, the game features a non-human player for solo play, a color blind mode for enhanced accessibility, and adjustable difficulty levels to cater to all skill levels. Players can save their progress and load saved games, ensuring a seamless and enjoyable experience. 
 
               </div>
@@ -365,7 +365,7 @@ const Desktop = ({ className = "" }) => {
               </div>
 
               <div className="project-details">
-              <div style={{width:"60vw"}}>
+              <div style={{width:"70vw"}}>
                 Zombie Chase is an action-packed shooting game developed in Unreal Engine using Blueprints. In this thrilling game, players must cross a zombie-infested bridge, picking up weapons and battling hordes of zombies along the way. HealthKits are strategically placed to help players restore their health and continue their journey. With immersive graphics and intense gameplay, Zombie Chase offers an exhilarating experience for all zombie survival enthusiasts.
               </div>
   
