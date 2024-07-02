@@ -99,7 +99,7 @@ const Desktop = ({ className = "" }) => {
       <Contacts/>
     </div>
     
-    <Parallax pages={window.innerWidth < 768? 10 : 8.35}>
+    <Parallax pages={window.innerWidth < 768? 11 : 8.35}>
 
       <ParallaxLayer sticky={{start:0,end:1}}>
       <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
@@ -203,7 +203,7 @@ const Desktop = ({ className = "" }) => {
           </ParallaxLayer>
           
         <div className="projects">
-        <ParallaxLayer offset={window.innerWidth < 768? 3.2 : 3.7}>
+        <ParallaxLayer offset={window.innerWidth < 768? 3.5 : 3.7}>
           <div className="project">
             
           {/* <div  className="sliding-img"> */}
@@ -261,7 +261,7 @@ const Desktop = ({ className = "" }) => {
             </div>
           </div>
         </ParallaxLayer>
-          <ParallaxLayer offset={window.innerWidth < 768? 5 : 5}>
+          <ParallaxLayer offset={window.innerWidth < 768? 5.5 : 5}>
           <div className="project">
           <div ref={cantstop} id="cantstop" className={window.innerWidth < 768? "cantstop-slider img-slider": "image-track"}data-mouse-down-at="0" data-prev-percentage= "0" data-visible={`${cantstopIsVisible? 1:0}`} draggable="false">
                 <div class="arrow">
@@ -330,7 +330,7 @@ const Desktop = ({ className = "" }) => {
           </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={window.innerWidth < 768? 6.8 : 6.2}>    
+      <ParallaxLayer offset={window.innerWidth < 768? 7.5 : 6.2}>    
         <div className="project">
             {/* <div className="sliding-img">
                 <div className='img-slider zombie-slider' data-mouse-down-at="0">
@@ -396,7 +396,7 @@ const Desktop = ({ className = "" }) => {
             
         </div>
       </div>
-    <ParallaxLayer offset={window.innerWidth < 768?9 : 7.5} speed={1}>
+    <ParallaxLayer offset={window.innerWidth < 768?10 : 7.5}>
     {/* <div ref={myRef} className={`about ${aboutIsVisible? 'aboutAnimate' :''}`}  >
       {aboutIsVisible?'yes':'no'}
            </div> */}
