@@ -36,7 +36,6 @@ body{
     position: fixed;
     left: 40.7rem;
     top: 22.5rem;
-
 }
 
 @keyframes loader_out {
@@ -134,7 +133,7 @@ body{
     position: absolute;
     top: 57px;
     z-index: 500;
-    left: 1291px;
+    right: 100px;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -234,7 +233,7 @@ body{
   }
   .lokesh {
     top: 430px;
-    left: 475px;
+    left: 593px;
     text-shadow: none; 
 
     opacity: 0%;
@@ -248,63 +247,29 @@ body{
     /* name-animate */
     0% {
       opacity: 0%;
-      left: 400px;
-    }
+      transform: translateX(-193px) 
+      }
     20% {
       opacity: 20%;
-      left: 593px;
+      transform: translateX(0)
     }
     
     /* flicker */
 
-    69.99% {
+    69.99% ,75.01%,99%{
       text-shadow: none;
       opacity: 20%;
-      left: 593px;
+      transform: translateX(0)
 
     }
-    70% {
+    70%,75%,100% {
       text-shadow:
       0 0 7px #fff,
       0 0 82px #f09,
       0 0 92px #7a5af5,
       0 0 102px #7a5af5;
       opacity: 100%;
-      left: 593px;
-
-    }
-
-
-    75% {
-      text-shadow:
-      0 0 7px #fff,
-      0 0 82px #f09,
-      0 0 92px #7a5af5,
-      0 0 102px #7a5af5;
-      opacity: 100%;
-      left: 593px;
-    }
-
-    75.01%{
-      text-shadow: none;
-      opacity: 20%;
-      left: 593px;
-    }
-    99% {
-      text-shadow: none;
-      opacity: 20%;
-      left: 593px;
-
-    }
-    100% {
-      color: #fff;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 82px #f09,
-      0 0 92px #7a5af5,
-      0 0 102px #7a5af5;
-      opacity: 100%;
-      left: 593px;
+      transform: translateX(0)
 
     }
   }
@@ -472,8 +437,20 @@ body{
       height: 8.5rem;
       margin: 0.7rem;
     }
-
   }
+  @keyframes magnify-smaller {
+    0%,100%{
+      height: 13vw;
+      margin: 0.2rem;
+    }
+    50%{
+      height: 13.2vw;
+      margin: 0.25rem;
+    }
+  }
+
+
+
 
   .skills{
     width: 85vw;
@@ -528,6 +505,12 @@ hr{
   animation: animate 2s infinite;
 }
 
+.arrow div{
+  padding: 1rem 0 0 0.5rem;
+  transform: rotate(-90deg);
+
+}
+
 .arrow span:nth-child(2) {
   animation-delay: -0.2s;
 }
@@ -549,4 +532,130 @@ hr{
       transform: rotate(45deg) translate(20px, 20px);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .desktop-1{
+    top: 0.2rem;
+    left: 0.2rem;
+    bottom: .2rem;
+  }
+
+  .hire-me {
+    font-size: 14px;
+    right: 50px;
+  }
+
+  .avatar{
+    width: 240px;
+    height: 524px;
+    opacity: 0%;
+    animation: animate-avatar 1s ease-in 6.5s forwards;
+  }
+  .avatars-default-1-1 {
+    top: 50px;
+    left: 115px;
+    width: 200px;
+    height: 300px;
+  }
+
+  .grid{
+    left: 183px;
+    top: 164px;
+    height: 42%;
+  }
+
+  .pane{
+    height: 1rem;
+		width: 1rem;
+  }
+
+  .image-1-icon{
+    top: 175px;
+    left: 46px;
+    width: 336px;
+    height: 163px;
+
+  }
+
+  .hi-my-name-container{
+    top: 530px;
+    left: 50px;
+    font-size: 28px;
+  }
+
+  .hi-my-name-container p{
+    line-height: 60px;
+  }
+
+  .lokesh{
+    top: 581px;
+    left: 241px;
+    font-size: 50px;
+  }
+
+  .i-am-a-container{
+    top: 667px;
+    left: 45px;
+    font-size: 20px;
+
+  }
+
+  .scroll{
+    top: 803px;
+  }
+
+  .desktop-1-item{
+    top: 850px;
+  }
+  .about-heading,
+  .work-together-heading,
+  .skills-heading {
+    font-size: 50px;
+    left: 20vw;
+  }
+
+  .about,
+  .work-together,
+  .skills {
+    font-size: 18px;
+    width: 60vw;
+    left: 20vw;
+
+  }
+
+  .coolme{
+    display: none;
+  }
+  .work-together{
+transform:translateY(100px)  }
+
+  .skill-img {
+    height: 20px;
+    margin: 2px;
+    top: 28vh;
+    left: 0px;
+    animation: magnify-smaller 1s infinite;
+  }
+  .skills{
+    position: relative;
+  }
+
+  .arrow{
+    display: none;
+  }
+
+  .loader-page .cup-only{
+    position: fixed;
+    display: flex;
+    left: 30vw;
+    top:400px;
+    z-index: 6000000;
+}
+
+.cup-only{
+  display: none;
+}
+
+
+} 
 
