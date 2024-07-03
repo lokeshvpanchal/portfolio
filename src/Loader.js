@@ -20,6 +20,9 @@ const Loader = ({className = ""})=>{
    </div>
    <div className="coffee-footer"></div>
  </div>
+ <div className='quote'>Loading... Just like a good cup of coffee, <br/>my website takes a little time to brew perfection!
+
+</div>
 </div>
 
 
