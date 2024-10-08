@@ -1,7 +1,7 @@
 import React from 'react';
 
 import"./project.css";
-import"./Desktop.css";
+import "../../views/Desktop.css";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 let imageNum = 0;

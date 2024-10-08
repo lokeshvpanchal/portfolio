@@ -1,13 +1,13 @@
-import "./Desktop.css";
-import "./btn.css"
-import "./global.css";
-import "./myproject.css";
+import "./views/Desktop.css";
+import "./views/btn.css"
+import "./views/global.css";
+import "./components/project/myproject.css";
 import React, {useEffect,useRef } from 'react';
-import Loader from "./Loader";
-import Project from "./projects";
-import Cup from "./Cup";
+import Loader from "./components/loader/Loader.js";
+import Project from "./components/project/projects.js";
+import Cup from "./components/cup/Cup.js";
 import { Parallax,ParallaxLayer } from '@react-spring/parallax';
-import Contacts from "./Contacts";
+import Contacts from "./components/contacts/Contacts.js";
 import { useInView } from "react-intersection-observer";
 
 function update(event){
@@ -33,7 +33,7 @@ function update(event){
 	container.style.setProperty("--y", ratioY);
 }// update
 
-const Desktop = ({ className = "" }) => {
+const Home = ({ className = "" }) => {
     const{ref: myRef ,inView: aboutIsVisible} = useInView();
     const{ref: myproject ,inView: myprojectIsVisible} = useInView();
     const{ref: bigbull ,inView: bigbullIsVisible} = useInView();
@@ -101,13 +101,13 @@ const Desktop = ({ className = "" }) => {
     
     <Parallax pages={window.innerWidth < 768? 12.3 : 8.6}>
 
-      <ParallaxLayer sticky={{start:0,end:1}}>
+      <ParallaxLayer>
       <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
   hire me!
 </a>
-
       </ParallaxLayer>
-      <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 768 ? 2.5: null}offset={window.innerWidth < 768 ? 0.2: null} sticky={window.innerWidth>768 ?{start:0 , end:1.1}: null}>
+
+      <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 768 ? 2.5: null}offset={window.innerWidth < 768 ? 0.2: 0} sticky={window.innerWidth>768 ?{start:0 , end:1.1}: null}>
       <img className="image-1-icon" style={{"z-index":-1}}src="/avatar-bg.png" />
       <div className="avatar">
         <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
@@ -429,4 +429,4 @@ const Desktop = ({ className = "" }) => {
 };
 
 
-export default Desktop;
+export default Home;

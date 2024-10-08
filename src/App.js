@@ -1,5 +1,5 @@
-import './App.css';
-import Desktop from './desktop';
+import './views/App.css';
+import Desktop from './home';
 
 function App() {
   return (
