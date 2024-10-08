@@ -1,6 +1,5 @@
 import React from 'react';
 import"./loader.css";
-import Cup from './Cup';
 
 const Loader = ({className = ""})=>{
     return(

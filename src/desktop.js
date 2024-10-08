@@ -1,13 +1,13 @@
-import "./Desktop.css";
-import "./btn.css"
-import "./global.css";
-import "./myproject.css";
+import "./views/Desktop.css";
+import "./views/btn.css"
+import "./views/global.css";
+import "./components/project/myproject.css";
 import React, {useEffect,useRef } from 'react';
-import Loader from "./Loader";
-import Project from "./projects";
-import Cup from "./Cup";
+import Loader from "./components/loader/Loader";
+import Project from "./components/project/projects.js";
+import Cup from "./components/cup/Cup";
 import { Parallax,ParallaxLayer } from '@react-spring/parallax';
-import Contacts from "./Contacts";
+import Contacts from "./components/contacts/Contacts";
 import { useInView } from "react-intersection-observer";
 
 function update(event){
