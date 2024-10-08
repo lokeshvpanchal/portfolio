@@ -3,6 +3,10 @@ body{
   user-select: none;
   overflow: hidden;
 }
+
+#main{
+  align-items: center;
+}
 .desktop-1 {
     position: fixed;
     top: 1rem;
@@ -13,7 +17,6 @@ body{
     width: 98vw;
     height: 96vh;  
     overflow: hidden;
-
   }
 
 .contact{
@@ -30,26 +33,29 @@ body{
     z-index: 600;
     border-radius: 1rem;
     background-color: #5e43f3 ;
-    animation: loader_out 1s ease 4s  forwards;
+    animation: loader_out 1s ease 4s forwards;
 }
 .loader-page .cup-only{
     position: fixed;
-    left: 40.7rem;
-    top: 22.5rem;
+    left :calc(51vw - 94px) ;
+    top: calc(51vh - 42.4px);
 }
 
 @keyframes loader_out {
     0%{
         left: 1vw;
         opacity: 1;
+
     }
     50%{
         left: 50vw;
         opacity: 1;
+
     }
     99%{
         left:99vw;
         opacity: 1;
+
     }
 
     100%{
@@ -109,30 +115,10 @@ body{
 		--layer: 4;
 	}
 	
-
-  .menu {
-    position: absolute;
-    top: 65px;
-    left: 119px;
-    display: inline-block;
-    width: 85px;
-    height: 39px;
-  }
-  .vector-icon {
-    width: 61px;
-    height: 44px;
-    object-fit: contain;
-  }
-  .vector-icon1 {
-    top: calc(50% - 461px);
-    left: calc(50% + 464px);
-    width: 63px;
-    height: 46px;
-  }
   .hire-me{
     position: absolute;
     top: 57px;
-    z-index: 500;
+    z-index: 5000;
     right: 100px;
     display: flex;
     align-items: center;
@@ -199,6 +185,12 @@ body{
   .name-is {
     margin: 0;
   }
+
+  .intro{
+    position: relative;
+    left: calc(15vh);
+    top: 40vh;
+  }
   .hi-my-name-container,
   .lokesh {
     z-index: 500;
@@ -207,8 +199,7 @@ body{
     line-height: 80px;
   }
   .hi-my-name-container {
-    top: 307px;
-    left: 100px;
+    position: relative;
     color: white;
   }
   .hi-my-name-container p{
@@ -217,7 +208,6 @@ body{
     line-height: 102px;
     white-space: nowrap; /* Keeps the content on a single line */
     animation: text-animate 0.5s ease 5.5s forwards; 
-   
   }
 
   @keyframes text-animate{xw
@@ -232,11 +222,11 @@ body{
   
   }
   .lokesh {
-    top: 430px;
-    left: 593px;
     text-shadow: none; 
-
     opacity: 0%;
+    position: relative;
+    left: 32rem;
+    top: -5.5rem;
     animation: combined-animation  2.5s ease-in 6.0s forwards; 
     font-family: "Vibur", sans-serif; 
     font-size: 90px;
@@ -643,14 +633,6 @@ transform:translateY(100px)  }
   .arrow{
     display: none;
   }
-
-  .loader-page .cup-only{
-    position: fixed;
-    display: flex;
-    left: 30vw;
-    top:400px;
-    z-index: 6000000;
-}
 
 .cup-only{
   display: none;

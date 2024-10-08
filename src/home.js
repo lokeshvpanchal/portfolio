@@ -98,14 +98,11 @@ const Home = ({ className = "" }) => {
     <div className="contact">
       <Contacts/>
     </div>
+    <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
+        hire me!
+    </a>
     
-    <Parallax pages={window.innerWidth < 768? 12.3 : 8.6}>
-
-      <ParallaxLayer>
-      <a href="mailto:lvpanchal@mun.ca?Subject=Hi%20Lokesh%21%20I%20would%20like%20to%20hire%20you" className="hire-me" id= "hire-me"style={{textDecoration:"none"}}>
-  hire me!
-</a>
-      </ParallaxLayer>
+    <Parallax id='main' pages={window.innerWidth < 768? 12.3 : 8.6}>
 
       <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 768 ? 2.5: null}offset={window.innerWidth < 768 ? 0.2: 0} sticky={window.innerWidth>768 ?{start:0 , end:1.1}: null}>
       <img className="image-1-icon" style={{"z-index":-1}}src="/avatar-bg.png" />
@@ -119,11 +116,14 @@ const Home = ({ className = "" }) => {
       </ParallaxLayer>
       
       <ParallaxLayer offset={0} speed={2.1}>
-      <div className="hi-my-name-container">
-        <p className="hi-my">Hello  World! </p>
-        <p className="name-is">My name is</p>
+      <div className="intro">
+        <div className="hi-my-name-container">
+          <p className="hi-my">Hello  World! </p>
+          <p className="name-is">My name is</p>
+          <b className="lokesh">Lokesh.</b>
+        </div>
       </div>
-      <b className="lokesh">Lokesh.</b>
+      
       <Cup/>
       </ParallaxLayer>
     
