@@ -115,24 +115,6 @@ body{
 		--layer: 4;
 	}
 	
-  .hire-me{
-    position: absolute;
-    top: 57px;
-    z-index: 5000;
-    right: 100px;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    color: #717171;
-    font-size: 20px;
-    font-family: var(--font-italiana);
-    text-decoration: none;
-  }
-
-  .hire-me:hover{
-    color: #fff;
-  }
   .me{
     position: absolute;
     right: 0vw;

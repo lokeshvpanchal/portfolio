@@ -325,7 +325,7 @@
   text-align: center;
   width: 400px;
   position: absolute;
-  top: 30.4rem;
+  top: calc(50% + 80px);
   left: calc(50vw - 200px);
 }
  
