@@ -183,7 +183,7 @@ const Home = ({ className = "" }) => {
     </ParallaxLayer>
     <div className="projects-section">
           <ParallaxLayer offset={window.innerWidth < 768? 2.35 : 2.5}>
-            <div ref={myproject} style={{display:"flex", alignContent:"center"}}>
+            <div className="my-anim" ref={myproject} style={{display:"flex", alignContent:"center"}}>
               <div className="coolme">
               <img alt= "" id="bg"className ="cloud1" src="/images/myproject/bg.png" style={{width:"46rem"}}></img>
               <img alt= "" className={`parts part1 ${myprojectIsVisible? 'in-view' :''}`} id="part1" src="/images/myproject/part1.png"></img>
@@ -414,10 +414,10 @@ const Home = ({ className = "" }) => {
           <img className="skill-img" id="mongodb-img" src="/images/skills/5.png"></img>
           <img className="skill-img" src="/images/skills/6.png"></img>
           <img className="skill-img" src="/images/skills/7.png"></img>
+          <img className="skill-img" src="/images/skills/8.png"></img>
         </div>
         <div>
           <img className="skill-img" src="/images/skills/4.png"></img>
-          <img className="skill-img" src="/images/skills/8.png"></img>
           <img className="skill-img" src="/images/skills/9.png"></img>
           <img className="skill-img" src="/images/skills/10.png"></img>
         </div>
