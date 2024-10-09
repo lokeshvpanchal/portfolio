@@ -326,7 +326,7 @@
   width: 400px;
   position: absolute;
   top: 30.4rem;
-  left: 33.7rem;
+  left: calc(50vw - 200px);
 }
  
 
