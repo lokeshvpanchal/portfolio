@@ -133,6 +133,10 @@ body{
   .hire-me:hover{
     color: #fff;
   }
+  .me{
+    position: absolute;
+    right: 0vw;
+  }
 
   .avatar-comp{
     z-index: -1;
@@ -188,7 +192,7 @@ body{
 
   .intro{
     position: relative;
-    left: calc(15vh);
+    left: 15vh;
     top: 40vh;
   }
   .hi-my-name-container,
@@ -267,9 +271,9 @@ body{
 
   
   .i-am-a-container {
-    position: absolute;
-    top: 535px;
-    left: 105px;
+    position: relative;
+    left: 15vh;
+    top: 65vh;
     color: #bfbfbf;
     opacity: 0%;
     font-size: 26px;
@@ -288,8 +292,8 @@ body{
   } 
   .desktop-1-item {
     position: absolute;
-    top: 735.5px;
-    left: 299.5px;
+    left: 20vw;
+    top: 90vh;
     border-right: 1px solid var(--color-black);
     box-sizing: border-box;
     width: 1px;
@@ -300,8 +304,8 @@ body{
   .scroll
    {
     position: absolute;
-    top: 680px;
-    left: 266px;
+    left: 17vw;
+    top: 85vh;
     font-family: var(--font-italiana);
 
   }

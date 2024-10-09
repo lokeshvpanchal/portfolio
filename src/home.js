@@ -105,12 +105,14 @@ const Home = ({ className = "" }) => {
     <Parallax id='main' pages={window.innerWidth < 768? 12.3 : 8.6}>
 
       <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 768 ? 2.5: null}offset={window.innerWidth < 768 ? 0.2: 0} sticky={window.innerWidth>768 ?{start:0 , end:1.1}: null}>
-      <img className="image-1-icon" style={{"z-index":-1}}src="/avatar-bg.png" />
-      <div className="avatar">
-        <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
-        <div class="grid">
-          <div class="pane"></div>
-          <div class="pane"></div>
+      <div className='me'>
+        <img className="image-1-icon" style={{"z-index":-1}}src="/avatar-bg.png" />
+        <div className="avatar">
+          <img className="avatars-default-1-1"  alt="" src="/avatar.png"/>
+          <div class="grid">
+            <div class="pane"></div>
+            <div class="pane"></div>
+          </div>
         </div>
       </div>
       </ParallaxLayer>
