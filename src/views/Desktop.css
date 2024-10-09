@@ -359,7 +359,7 @@ body{
 
   .about-heading{
     position: relative;
-    left: 105px;
+    left: 15vh;
     font-size: 50px;
     top: -600px;
 
@@ -368,7 +368,7 @@ body{
     opacity: 1;
     position: relative;
     color: white;
-    left: 105px;
+    left: 15vh;
     font-size: 25px;
     width: 45rem;
     top: -500px;
@@ -390,7 +390,7 @@ body{
 
   .work-together-heading{
     position: relative;
-    left: 105px;
+    left: 15vh;
     top: 400px;
     font-size: 50px;
 
@@ -398,7 +398,7 @@ body{
   .work-together{
     position: relative;
     color: white;
-    left: 105px;
+    left: 15vh;
     top: 550px;
     font-size: 25px;
     width: 45rem;
@@ -406,7 +406,7 @@ body{
 
   .skills-heading{
     position: relative;
-    left: 105px;
+    left: 15vh;
     top: 10rem;
     font-size: 50px;
 
