@@ -1,3 +1,4 @@
+
 import "./global/Desktop.css";
 import "./global/btn.css"
 import "./global/global.css";
@@ -57,6 +58,7 @@ const Home = ({ className = "" }) => {
 
 
 {/* more introduction */}  
+
     <ParallaxLayer offset={0} speed={1.7}>
 
       <div className="i-am-a-container">
@@ -65,6 +67,7 @@ const Home = ({ className = "" }) => {
           Memorial University of Newfoundland, St. John’s NL
         </p>
       </div>
+
     </ParallaxLayer>
 
 {/* scroll text */}
@@ -140,6 +143,7 @@ const Home = ({ className = "" }) => {
       <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet"></link>
   </div>
   );
+ 
 };
 
 
