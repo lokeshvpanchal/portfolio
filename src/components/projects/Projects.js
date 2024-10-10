@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
 import"./project.css";
-import "../../views/Desktop.css";
+import "../../global/Desktop.css";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { useInView } from "react-intersection-observer";
 
@@ -12,6 +12,48 @@ const Project = ({className = ""})=>{
   const{ref: bigbull ,inView: bigbullIsVisible} = useInView();
   const{ref: cantstop ,inView: cantstopIsVisible} = useInView();
   const{ref: zombiechase ,inView: zombiechaseIsVisible} = useInView();
+
+  const tracks =document.getElementsByClassName('image-track')
+  const track = document.getElementById('image-track')
+
+    useEffect(() => {
+        window.onmousedown = e=>{
+          for(const track of tracks){
+            if(track.dataset.visible==1){
+              track.dataset.mouseDownAt = e.clientX;
+            }
+          }
+        }
+        window.onmouseup = e=>{
+          for(const track of tracks){
+            if(track.dataset.visible==1){
+              track.dataset.mouseDownAt = "0";
+              track.dataset.prevPercentage = track.dataset.percentage;  
+              console.log(track.dataset.percentage)
+            }
+          }
+         
+        }
+        window.onmousemove = e =>{
+          for(const track of tracks){
+            if(track.dataset.visible==1){
+              if(track.dataset.mouseDownAt =="0")return;
+              const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+              maxDelta = window.innerWidth/1.5;
+              var percentage = (mouseDelta / maxDelta *-100),
+              nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+              if(nextPercentage>0){nextPercentage=0;}
+              if(nextPercentage<-70){nextPercentage =-70;}
+              track.dataset.percentage = nextPercentage;
+              track.animate({transform :`translate(${nextPercentage}%)`},{duration:1800, fill: "forwards"});
+              for(const image of track.getElementsByClassName('image')){
+                image.animate({objectPosition :`${nextPercentage *100/-70}% 50%`},{duration:1800, fill:"forwards"})
+              }
+            }
+          }
+
+        }
+    });
 
 
   return(

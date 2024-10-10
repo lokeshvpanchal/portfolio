@@ -1,0 +1,143 @@
+/* Eyes of avatar */
+
+.grid {
+	/* configure a grid for the panes to exist in */
+    position: relative;
+    left: 58.7rem;
+    top: -23rem;
+	display: grid;
+	height: 49%;
+	aspect-ratio: 1.8/4;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	
+	/* create some arbitrary perspective for the 3d rotations */
+	perspective: 800px;
+	
+	--x: 0; /* cursor x ratio set in the js */ 
+	--y: 0; /* cursor y ratio set in the js */ 
+}
+	.pane {
+		/* style the panes to be individually distinct */
+		height: 2rem;
+		width: 2rem;
+		position: relative;
+		border-radius:50%;
+		z-index: 400;
+		scale: var(--scale);
+        background-color: black;		
+		/* apply a parallax effects with translations and rotations */
+		translate:  var(--translation__x) var(--translation__y);
+		
+		/* define the max distances that each pane can travel */
+		--translation__distance: 2em;
+				
+		/* scale the translation based on the cursor and the individual pane's intensity */
+		--translation__x: calc(var(--translation__distance) * var(--x) * var(--intensity));
+		--translation__y: calc(var(--translation__distance) * var(--y) * var(--intensity));
+	}
+	/* configure panes to be different sizes for visual interest */
+	.pane:nth-child(1){ 
+		--scale: 1;
+		--intensity: 0.1;
+		--layer: 4;
+	}
+	.pane:nth-child(2){ 
+		--scale: 1;
+		--intensity: 0.1;
+		--layer: 4;
+	}
+
+/* avatar body */
+
+.me{
+    position: absolute;
+    right: 0vw;
+  }
+
+  .avatar-comp{
+    z-index: -1;
+  }
+  .image-1-icon {
+    position: absolute;
+    top: 357px;
+    left: 566px;
+    width: 786px;
+    height: 341px;
+    object-fit: cover;
+    opacity: 0%;
+    z-index: -1;
+    animation: animate-avatar 0.5s ease 6.5s forwards;
+  }
+
+  .avatar{
+    width: 1440px;
+    height: 1024px;
+    opacity: 0%;
+    animation: animate-avatar 1s ease-in 6.5s forwards;
+  }
+  @keyframes animate-avatar {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(-30px);
+      }
+      80% { transform: translateX(10px); }
+      100% { transform: translateX(0);
+        opacity: 1;
+    }
+    }
+
+  .avatars-default-1-1 {
+    position: relative;
+    top: 70px;
+    left: 759px;
+    width: 512px;
+    height: 694px;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 1385px) {
+    .me{
+        left: calc(50vw - 210px);
+        top:-4rem;
+      }
+      .avatar{
+        position: relative;
+        left: 100px;
+        width: calc(340px + 15vw);
+        height: 524px;
+        opacity: 0%;
+        animation: animate-avatar 1s ease-in 6.5s forwards;
+      }
+      .avatars-default-1-1 {
+        top: 50px;
+        left: 0px;
+        width: calc(200px + 15vw);
+        height: calc(400px + 7vw);
+      }
+    
+      .grid{
+        top: 0;
+        position: absolute;
+        left: calc(17.5% + 3.5vw);
+        top: calc(37.5% + 3.5vw);
+        height:calc(53% + 8vw );
+      }
+    
+      .pane{
+        height: 1.4rem;
+            width: 1.4rem;
+      }
+    
+      .image-1-icon{
+        top: 175px;
+        left: 46px;
+        width: calc(336px + 15vw );
+        height: calc(163px + 5vh);
+        
+      }
+  }

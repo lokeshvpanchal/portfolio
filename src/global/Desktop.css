@@ -1,0 +1,363 @@
+body{
+  background-color: #121212;
+  user-select: none;
+  overflow: hidden;
+}
+#main{
+  align-items: center;
+}
+
+.parallax{
+  height: fit-content;
+}
+.desktop-1 {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+    background-color: #282828; 
+    text-shadow: 1px 1px 20px black;
+    width: 98vw;
+    height: 96vh;  
+    overflow: hidden;
+    border-radius: 1rem;
+    text-align: left;
+    font-size: var(--font-size-11xl);
+    color: white;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 500;
+  }
+
+/* loader page  */
+  .loader-page{
+    width: 98vw;
+    height: 98vh;
+    position:fixed;
+    left: 1vw;
+    top: 1vh;
+    z-index: 600;
+    border-radius: 1rem;
+    background-color: #5e43f3 ;
+    animation: loader_out 1s ease 4s forwards;
+}
+.loader-page .cup-only{
+    position: fixed;
+    left :calc(51vw - 94px) ;
+    top: calc(51vh - 42.4px);
+}
+
+@keyframes loader_out {
+    0%{
+        left: 1vw;
+        opacity: 1;
+
+    }
+    50%{
+        left: 50vw;
+        opacity: 1;
+
+    }
+    99%{
+        left:99vw;
+        opacity: 1;
+
+    }
+
+    100%{
+        left:100vw;
+        opacity: 0;
+    }
+}
+
+/* contact  */
+.contact{
+  position: fixed;
+  z-index: 100;
+}
+
+  
+/* introduction */
+  .hi-my {
+    margin-block-start: 0;
+    margin-block-end: 1px;
+  }
+  .name-is {
+    margin: 0;
+  }
+
+  .intro{
+    position: relative;
+    left: 15vh;
+    top: 40vh;
+  }
+  .hi-my-name-container,
+  .lokesh {
+    z-index: 500;
+    position: absolute;
+    font-size: var(--font-size-61xl);
+    line-height: 80px;
+  }
+  .hi-my-name-container {
+    position: relative;
+    color: white;
+  }
+  .hi-my-name-container p{
+    opacity: 0%;
+    overflow: hidden;
+    line-height: 102px;
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: text-animate 0.5s ease 5.5s forwards; 
+  }
+
+  @keyframes text-animate{xw
+    0%{
+        opacity: 0%;
+        width: 0;
+    }
+    100%{
+        opacity: 100%;
+        width: 100%;
+    }
+  
+  }
+  .lokesh {
+    text-shadow: none; 
+    opacity: 0%;
+    position: relative;
+    left: 32rem;
+    top: -5.5rem;
+    animation: combined-animation  2.5s ease-in 6.0s forwards; 
+    font-family: "Vibur", sans-serif; 
+    font-size: 90px;
+    font-weight: 700;
+  }
+
+  @keyframes combined-animation {
+    /* name-animate */
+    0% {
+      opacity: 0%;
+      transform: translateX(-193px) 
+      }
+    20% {
+      opacity: 20%;
+      transform: translateX(0)
+    }
+    
+    /* flicker */
+
+    69.99% ,75.01%,99%{
+      text-shadow: none;
+      opacity: 20%;
+      transform: translateX(0)
+
+    }
+    70%,75%,100% {
+      text-shadow:
+      0 0 7px #fff,
+      0 0 82px #f09,
+      0 0 92px #7a5af5,
+      0 0 102px #7a5af5;
+      opacity: 100%;
+      transform: translateX(0)
+
+    }
+  }
+
+
+  
+  .i-am-a-container {
+    position: relative;
+    left: 15vh;
+    top: 65vh;
+    color: #bfbfbf;
+    opacity: 0%;
+    font-size: 26px;
+    animation: animate-details 0.5s ease 6.5s forwards;
+  }
+
+  @keyframes animate-details{
+    0%{
+        opacity: 0%;
+        height:0;
+    }
+    100%{
+        opacity: 100%;
+        height: 100%;
+    }
+  } 
+
+/* scroll text */
+  .desktop-1-item {
+    position: absolute;
+    left: 20vw;
+    top: 90vh;
+    border-right: 1px solid var(--color-black);
+    box-sizing: border-box;
+    width: 1px;
+    height: 194px;
+
+  }
+
+  .scroll
+   {
+    position: absolute;
+    left: 17vw;
+    top: 85vh;
+    font-family: var(--font-italiana);
+
+  }
+  
+ .scroll-letter{
+  position: relative;
+    animation: waveAnim 1s infinite;
+    display: inline-block;
+    letter-spacing: 2px;
+    animation-delay: calc(.1s *var(--i));
+  }
+
+  @keyframes waveAnim {
+    0%,40%,100%{
+      transform: translateY(0);
+    }
+    20%{
+      transform: translateY(-10px);
+    }
+  }
+
+
+/* about me */
+  .about-heading{
+    position: relative;
+    left: 15vh;
+    font-size: 50px;
+    top: -600px;
+
+  }
+  .about{
+    opacity: 1;
+    position: relative;
+    color: white;
+    left: 15vh;
+    font-size: 25px;
+    width: 45rem;
+    top: -500px;
+   
+  }
+
+  .aboutAnimate {
+    opacity: 0.4;
+    top: 0;
+    animation-name: fade-in;
+    animation-duration: 2s;
+  }
+
+
+  @keyframes fade-in {
+    from{opacity: 0.5;}
+    to{ opacity: 1;}
+  }
+
+
+/* work together */
+  .work-together-heading{
+    position: relative;
+    left: 15vh;
+    top: 400px;
+    font-size: 50px;
+
+  }
+  .work-together{
+    position: relative;
+    color: white;
+    left: 15vh;
+    top: 550px;
+    font-size: 25px;
+    width: 45rem;
+  }
+
+
+hr{
+    width: 100px;
+    position: fixed;
+    left: 15vw;
+    background-color: #5e43f3;   
+    height: 6px;
+    margin: 5px; 
+    border: none;
+}
+
+
+@media screen and (max-width: 1385px) {
+  .desktop-1{
+    top: 0.2rem;
+    left: 0.2rem;
+    bottom: .2rem;
+  }
+  .intro{
+    left: 40px;
+    top: 65vh;
+  }
+
+  .hi-my-name-container{
+    font-size: 28px;
+  }
+
+  .hi-my-name-container p{
+    line-height: 40px;
+  }
+
+  .lokesh{
+    top:-60px;
+    left: 180px;
+    font-size: 50px;
+  }
+
+  .i-am-a-container{
+    margin-top: 1rem;
+    top: 75vh;
+    width: 90vw;
+    left: 40px;
+    font-size: 16px;
+  }
+
+  .scroll, .desktop-1-item{
+    display: none;
+  }
+
+  .desktop-1-item{
+    top: 850px;
+  }
+  .about-heading,
+  .work-together-heading{
+    font-size: 50px;
+    left: 20vw;
+  }
+
+  .about,
+  .work-together{
+    font-size: 18px;
+    width: 70vw;
+    left: 20vw;
+  }
+
+  
+
+  .coolme{
+    display: none;
+  }
+  .work-together{
+    transform:translateY(100px)  
+  }
+
+  .arrow{
+    display: none;
+  }
+  .loader-page .cup-only{
+    position: fixed;
+    top: 55vh ;
+  }
+.home-cup{
+  display: none;
+}
+} 
+
