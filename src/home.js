@@ -36,10 +36,7 @@ function update(event){
 const Home = ({ className = "" }) => {
     const{ref: myRef ,inView: aboutIsVisible} = useInView();
     const{ref: myproject ,inView: myprojectIsVisible} = useInView();
-    const{ref: bigbull ,inView: bigbullIsVisible} = useInView();
-    const{ref: cantstop ,inView: cantstopIsVisible} = useInView();
-    const{ref: zombiechase ,inView: zombiechaseIsVisible} = useInView();
-
+    
     const tracks =document.getElementsByClassName('image-track')
     const track = document.getElementById('image-track')
 
@@ -74,7 +71,7 @@ const Home = ({ className = "" }) => {
               if(nextPercentage>0){nextPercentage=0;}
               if(nextPercentage<-70){nextPercentage =-70;}
               track.dataset.percentage = nextPercentage;
-              track.animate({transform :`translate(${nextPercentage}%,70%)`},{duration:1800, fill: "forwards"});
+              track.animate({transform :`translate(${nextPercentage}%)`},{duration:1800, fill: "forwards"});
               for(const image of track.getElementsByClassName('image')){
                 image.animate({objectPosition :`${nextPercentage *100/-70}% 50%`},{duration:1800, fill:"forwards"})
               }
@@ -88,20 +85,18 @@ const Home = ({ className = "" }) => {
   return (
   <body className={`desktop-1`}>
 
-<link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'/>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet"></link>
     <div className="loader-page">
         <Loader/>
         <Cup/>
     </div>
-    
+
     <div className="contact">
       <Contacts/>
     </div>
     
-    <Parallax id='main' pages={window.innerWidth < 768? 12.3 : 8.6}>
+    <Parallax id='main' pages={window.innerWidth < 1025? 9.5 : 8.6}>
 
-      <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 768 ? 2.5: null}offset={window.innerWidth < 768 ? 0.2: 0} sticky={window.innerWidth>768 ?{start:0 , end:1.1}: null}>
+    <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 1025 ? 2.5: null}offset={window.innerWidth < 1025 ? 0.2: 0} sticky={window.innerWidth>1025 ?{start:0 , end:1.1}: null}>
       <div className='me'>
         <img className="image-1-icon" style={{"z-index":-1}}src="/avatar-bg.png" />
         <div className="avatar">
@@ -122,8 +117,11 @@ const Home = ({ className = "" }) => {
           <b className="lokesh">Lokesh.</b>
         </div>
       </div>
+      <div className="home-cup">
+        <Cup/>
+      </div>
+     
       
-      <Cup/>
       </ParallaxLayer>
     
     <ParallaxLayer offset={0} speed={1.7}>
@@ -178,10 +176,10 @@ const Home = ({ className = "" }) => {
 
       </div>
     </ParallaxLayer>
-    <div className="projects-section">
-          <ParallaxLayer offset={window.innerWidth < 768? 2.35 : 2.5}>
-            <div className="my-anim" ref={myproject} style={{display:"flex", alignContent:"center"}}>
-              <div className="coolme">
+    
+    <ParallaxLayer offset={window.innerWidth < 1025? 2.35 : 2.5}>
+      <div className="my-anim" ref={myproject} style={{display:"flex", alignContent:"center"}}>
+        <div className="coolme">
               <img alt= "" id="bg"className ="cloud1" src="/images/myproject/bg.png" style={{width:"46rem"}}></img>
               <img alt= "" className={`parts part1 ${myprojectIsVisible? 'in-view' :''}`} id="part1" src="/images/myproject/part1.png"></img>
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part2" src="/images/myproject/part2.png"></img>
@@ -193,27 +191,31 @@ const Home = ({ className = "" }) => {
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part8" src="/images/myproject/part8.png"></img>
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part9" src="/images/myproject/part9.png"></img>
               <img alt= "" className={`parts ${myprojectIsVisible? 'in-view' :''}`} id="part10" src="/images/myproject/part10.png"></img>
-              </div>
-              <div className="myProjects">My projects<span style={{color:"#5e43f3"}}>.</span></div>
+        </div>
+        <div className="myProjects">My projects<span style={{color:"#5e43f3"}}>.</span></div>
 
-           </div>
+      </div>
 
             
-          </ParallaxLayer>
+    </ParallaxLayer>
           
-      <ParallaxLayer offset={window.innerWidth < 768? 3.3 : 3.7}>
+      <ParallaxLayer offset={window.innerWidth < 1025? 3.3 : 3.7}>
           <Project/>
+
       </ParallaxLayer>            
       
-      </div>
-    <ParallaxLayer offset={window.innerWidth < 768?11.5 : 7.99} speed={1}>
+     
+    <ParallaxLayer offset={window.innerWidth < 1025?8 : 7.99} speed={1}>
       <div className="skills-heading">My skills <hr/></div>
       <div className="skills">
         <div>
-          <img className="skill-img" src="/images/skills/0.png"></img>
           <img className="skill-img" src="/images/skills/1.png"></img>
+          </div>
+        <div>
           <img className="skill-img" src="/images/skills/2.png"></img>
+          <img className="skill-img" src="/images/skills/0.png"></img>
           <img className="skill-img" src="/images/skills/3.png"></img>
+          
         </div>
         <div>
           <img className="skill-img" id="mongodb-img" src="/images/skills/5.png"></img>
@@ -228,18 +230,16 @@ const Home = ({ className = "" }) => {
         </div>
         
       </div>
-
-
-
     </ParallaxLayer>
 
-      </Parallax>
+  </Parallax>
 
 
-
-    </body>
+      <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'/>
+      <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet"></link>
+  </body>
+    
   );
-  
 };
 
 

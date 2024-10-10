@@ -330,12 +330,10 @@
 }
  
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1385px) {
   .container {
-    width: 60vw;
-    height: 280px;
+    left :calc(50vw - 150px) ;
     position: absolute;
-    left: 20vw;
     top:200px;
   }
   .quote{
