@@ -4,7 +4,7 @@
 
 .myProjects{
     position: relative;
-    left: 30px;
+    left: 15vw;
     top: 200px;
     font-size: 50px;
     font-family: "Vibur", sans-serif; 
@@ -217,7 +217,7 @@
 }
 
 @keyframes slider-4pic {
-    0% , 20%, 100%{
+    0% ,20% {
         left: 0;
     }
     25% ,45% {
