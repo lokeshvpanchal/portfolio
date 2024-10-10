@@ -1,9 +1,11 @@
-import './views/App.css';
-import Desktop from './home';
+
+import './global/App.css';
+import Home from './home';
+
 
 function App() {
   return (
-    <Desktop/>
+    <Home/>
   );
 }
 
