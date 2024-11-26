@@ -63,7 +63,7 @@ const Project = ({className = ""})=>{
             <div className="project rma" name="rma">              
           <div className="project-card">
             <div className="project-card-heading">
-              <div className="project-name"> Restaurant management app(in progress) <hr/> </div>
+              <div className="project-name"> Restaurant management app (in progress) <hr/> </div>
               
               <div className="project-tech"> <br/>-JavaScript, HTML, CSS, mySQL, Node.js, Express.js.</div>
             </div>
