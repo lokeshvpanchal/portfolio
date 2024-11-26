@@ -4,23 +4,6 @@ import"./project.css";
 import "../../views/Desktop.css";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
-let imageNum = 0;
-
-// function changeSrc(id,imageNum,project){
-//     let image= document.getElementById(id);
-//     image.src = "images/"+project+"/"+imageNum+".png"
-// }
-
-// function updateImage(){
-//     if(imageNum>4){
-//         imageNum=0;
-//     }
-//     changeSrc("bigBull-img",imageNum,"bigBull");
-//     // changeSrc("cantStop-img",imageNum,"cantStop");
-//     // changeSrc("zombieChase-img",imageNum,"zombieChase")
-//     imageNum++;
-// }
-
 const Project = ({className = ""})=>{
     // useEffect(() => {
     //    setInterval(updateImage,5000);
@@ -34,6 +17,31 @@ const Project = ({className = ""})=>{
           
         <div className="projects">
         <ParallaxLayer offset={2}>
+          <div className="project">
+            
+          <div className="sliding-img">
+                <div className='img-slider'>
+                <img alt="" src="/images/airbnb/1.png"/>
+                <img alt="" src="/images/airbnb/2.png"/>
+                <img alt="" src="/images/airbnb/3.png"/>
+                <img alt="" src="/images/airbnb/4.png"/>
+                </div>
+                
+            </div>
+          <div className="project-card">
+              <div className="project-card-heading">
+                Airbnb clone (in progress)
+                <hr/>
+              </div>
+              <div className="project-details">
+              -JavaScript, HTML, CSS, MongoDB, Node.js, Express.js.
+              <br/>
+              <br/>
+              A web application replicating Airbnb’s core features, including property listings, secure user authentication, and dynamic booking functionality. The project ensures error management on both front-end and back-end, providing clear user feedback for issues like invalid inputs or booking conflicts, while back-end handles exceptions and logs errors securely. This showcases expertise in full-stack development and building reliable, user-focused applications.              </div>
+            </div>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={4}>
           <div className="project">
             
           <div className="sliding-img">
@@ -63,7 +71,7 @@ const Project = ({className = ""})=>{
             </div>
           </div>
         </ParallaxLayer>
-          <ParallaxLayer offset={3}>
+          <ParallaxLayer offset={5}>
           <div className="project">
             <div className="project-card">
               <div className="project-card-heading">

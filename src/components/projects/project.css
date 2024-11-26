@@ -151,7 +151,14 @@
     position: relative;
 }
 
-#zombiechase{
+#rma {
+    max-width: 190rem;
+}
+
+#airbnb{
+    max-width: 180rem;
+}
+#zombiechase {
     max-width: 145rem;
 }
 
@@ -167,7 +174,7 @@
     animation: slider-7pic 16s ease-in-out 0s infinite;
 }
 
-.zombie-slider{
+.zombie-slider, .airbnb-slider, .rma-slider{
     animation: slider-4pic 20s ease-in-out 0s infinite;
 }
 /* automatic slider animations */
