@@ -126,7 +126,7 @@
     left: 2.5rem;
     align-items: center;
     max-height: 50vmin;
-    max-width: 250rem;
+    max-width: 190rem;
 }
 
 
@@ -149,34 +149,11 @@
     grid-row-end: 2;
     display: flex;
     position: relative;
+    animation: slider-4pic 16s ease-in-out 0s infinite;
+
 }
 
-#rma {
-    max-width: 190rem;
-}
 
-#airbnb{
-    max-width: 180rem;
-}
-#zombiechase {
-    max-width: 145rem;
-}
-
-#cantstop{
-    max-width: 210rem;
-}
-
-.bigbull-slider{
-    animation: slider-7pic 16s ease-in-out 0s infinite;
-}
-
-.cantstop-slider{
-    animation: slider-7pic 16s ease-in-out 0s infinite;
-}
-
-.zombie-slider, .airbnb-slider, .rma-slider{
-    animation: slider-4pic 20s ease-in-out 0s infinite;
-}
 /* automatic slider animations */
 @keyframes slider-7pic {
     0%,12.5%,100% {

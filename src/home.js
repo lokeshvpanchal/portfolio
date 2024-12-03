@@ -33,7 +33,7 @@ const Home = ({ className = "" }) => {
         <Contacts/>
     </div>
 
-    <Parallax id='main' pages={window.innerWidth < 1025? 11 : 10.6}>
+    <Parallax id='main' pages={window.innerWidth < 1025? 13 : 10.6}>
 {/* avatar */}  
       <ParallaxLayer className ="avatar-comp"  speed={window.innerWidth < 1385 ? 2.5: null}offset={window.innerWidth < 1025 ? 0.2: 0} sticky={window.innerWidth>1385 ?{start:0 , end:1.1}: null}>
         <Avatar/>
@@ -133,7 +133,7 @@ const Home = ({ className = "" }) => {
       </ParallaxLayer>            
       
 {/* skill section */}
-    <ParallaxLayer offset={window.innerWidth < 1025? 10 : 9.5}>
+    <ParallaxLayer offset={window.innerWidth < 1025? 12 : 9.5}>
       <Skills/>
     </ParallaxLayer>
 
