@@ -1,16 +1,16 @@
 
-import "./global/Desktop.css";
-import "./global/btn.css"
-import "./global/global.css";
+import "../global/Desktop.css";
+import "../global/btn.css"
+import "../global/global.css";
 
 import React, {useEffect,useRef } from 'react';
-import Loader from "./components/loader/Loader.js";
-import Project from "./components/projects/Projects.js";
-import Avatar from "./components/avatar/Avatar.js";
-import Contacts from "./components/contacts/Contacts.js";
-import Cup from "./components/cup/Cup.js";
-import Skills from "./components/skills/Skill.js";
-import MyProject from "./components/myProject/myProject.js"
+import Loader from "../components/loader/Loader.js";
+import Project from "../components/projects/Projects.js";
+import Avatar from "../components/avatar/Avatar.js";
+import Contacts from "../components/contacts/Contacts.js";
+import Cup from "../components/cup/Cup.js";
+import Skills from "../components/skills/Skill.js";
+import MyProject from "../components/myProject/myProject.js"
 
 import { Parallax,ParallaxLayer } from '@react-spring/parallax';
 import { useInView } from "react-intersection-observer";
