@@ -115,7 +115,7 @@ const Home = ({ className = "" }) => {
 
       <div className="work-together" >
         I'm excited to collaborate on innovative projects and bring ideas to life.
-        With expertise in full-stack web development and a growing interest in machine learning,
+        With expertise in full-stack web development and a focused interest in AWS Cloud,
         I'm ready to tackle new challenges. If you're looking for a passionate developer to join your team or help with a project, let's connect! 
       </div>
 
