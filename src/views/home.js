@@ -97,8 +97,7 @@ const Home = ({ className = "" }) => {
           I am your friendly neighborhood Computer Science enthusiast
           and I'm on a quest to master the art of full-stack web development,
           <span style={{color:"#5e43f3"}}> one line of code at a time. </span>
-          Recently, I've also started diving into the fascinating world of machine learning,
-          expanding my skill set and exploring new horizons in technology.
+          Recently, I’ve been dedicating my energy to studying AWS Cloud, expanding my skill set and diving into its cutting-edge services and scalable solutions.
         </div>
 
     </ParallaxLayer>
