@@ -24,6 +24,8 @@ const Skills = ()=>{
             <img className="skill-img" src="/images/skills/4.png"></img>
             <img className="skill-img" src="/images/skills/9.png"></img>
             <img className="skill-img" src="/images/skills/10.png"></img>
+            <img className="skill-img" src="/images/skills/11.png"></img>
+
             </div>
             
         </div>
